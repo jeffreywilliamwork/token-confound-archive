@@ -1,18 +1,19 @@
 
+#!/usr/bin/env markdown
 
 # Token-Position Confound in MoE Routing Entropy (Archive)
 
-This archive documents a specific, easy-to-miss failure mode when analyzing MoE routing:
+This repo is a self-contained archive documenting a specific, easy-to-miss failure mode when analyzing MoE routing:
 
 > **If routing entropy increases with token position, then any “mean entropy over all tokens” metric will be confounded by prompt length.**
 
-This matters directly to mechanistic interpretability work that uses router-entropy summaries to compare prompts, tasks, or “cognitive” categories.
+This matters directly to mechanistic interpretability work that uses router-entropy summaries to compare prompts, tasks, or dataset categories.
 
-## What This Archive Establishes
-
-- **An early “complexity hierarchy” experiment was invalid.** It was driven by token position / prompt length.
-- **The confound is real and cross-model.** It appears in DeepSeek V3.1 and Qwen 397B, and it explains why DeepSeek R1 “replicated” the same hierarchy.
-- **A simple control breaks the hierarchy:** compute routing entropy at a fixed position (e.g., last prompt token) instead of averaging over all prefill tokens.
+## TL;DR (What This Repo Establishes)
+- **Within-prefill routing entropy is token-position-sensitive.** Later prompt tokens have systematically higher routing entropy than earlier prompt tokens.
+- **Therefore, all-token means are prompt-length-confounded.** If you average RE over all prompt tokens, longer prompts will look “higher RE” even when content is irrelevant.
+- **This effect is cross-model.** It appears in DeepSeek V3.1 and Qwen 397B, and it also explains an apparent DeepSeek R1 “replication” that was actually length-driven.
+- **A simple position control removes the artifact:** evaluate RE at a fixed position (for example, the last prompt token) rather than averaging over all prompt tokens.
 
 At-a-glance (Spearman, n=168 prompts per model):
 
@@ -21,22 +22,48 @@ At-a-glance (Spearman, n=168 prompts per model):
 | DeepSeek V3.1 | +0.8019 | +0.0177 | +0.8797 |
 | Qwen 397B | +0.6166 | -0.0622 | +0.7813 |
 
-## Historical Warning
+The interpretation is: the “level” label looked predictive only because it co-varied with prompt length.
 
-Some files in `raw/` are preserved exactly because they show what was believed at the time.
+## Start Here (Reading Order)
 
-- They are part of the evidence trail.
-- They are not the archive's final interpretation.
-- If a raw writeup conflicts with `NARRATIVE.md` or `CROSS_MODEL_POSITION_CONFOUND.md`, treat the archive-level documents as the corrected interpretation.
+1. `CROSS_MODEL_POSITION_CONFOUND.md` (the evidence tables: all-token vs last-token)
+2. `NARRATIVE.md` (how the mistake happened, how it was detected)
+3. `MANIFEST.md` (inventory and what each folder is for)
+4. `PARTIAL-RESULTS.md` (a recovered subset that can only be recomputed partially)
 
-## Start Here
+## Quick Diagnostic (What To Report In Your Own Work)
 
-1. `CROSS_MODEL_POSITION_CONFOUND.md` (evidence and tables)
-2. `NARRATIVE.md` (chronology: what was claimed, what broke, what survived)
-3. `raw/168q-r1-deepseek-r1/168q-r1_RESULTS.md` (the original R1 headline writeup as written)
-4. `raw/r1-28q-1/r1-28q-1_RESULTS.md` (generation follow-up where the confound first became hard to ignore)
-5. `PARTIAL-RESULTS.md` (what can and cannot be recomputed from recovered raw captures)
-6. `MANIFEST.md` (inventory)
+If you want to use router entropy as a summary statistic:
+
+- Always report `rho(RE, token_count)` alongside `rho(RE, label)` (or any across-prompt comparison).
+- Prefer fixed-position metrics (last token, matched region boundaries) or explicitly stratify by token position.
+- If you must use all-token means, length-match prompts (or match positions) and say exactly how.
+
+Operationally, the confound is present when:
+
+- `rho(all-token RE, label)` is large
+- `rho(all-token RE, token_count)` is also large
+- `rho(last-token RE, label)` collapses to near 0
+
+## What’s In This Repo
+
+- `raw/`: copied source artifacts (original JSON outputs, logs, and “as-written” historical writeups)
+- `data/`: standardized summaries derived from `raw/` for easy cross-run comparison
+- `figures/`: plots used in the cross-model comparison
+- `supplemental/`: adjacent-but-nonloadbearing artifacts (including a partial raw recovery from an external SSD)
+
+Some files in `raw/` preserve conclusions that were later invalidated. They are kept because they are part of the evidence trail. If a raw writeup conflicts with `NARRATIVE.md` or `CROSS_MODEL_POSITION_CONFOUND.md`, treat the archive-level docs as the corrected interpretation.
+
+## Reproducing The Summary Tables
+
+The key standardized summaries in `data/` can be rebuilt from the checked-in `raw/` sources:
+
+```bash
+python3 -m pip install numpy scipy
+python3 data/rebuild_from_raw.py
+```
+
+This regenerates the small set of `data/*.json` and `data/*.md` files used by the archive’s tables (and rewrites any machine-specific provenance paths to portable repo-relative paths).
 
 ## Definitions (Minimal)
 
@@ -44,15 +71,6 @@ Some files in `raw/` are preserved exactly because they show what was believed a
 - **All-token mean RE**: mean routing-entropy computed across all prompt tokens.
 - **Last-token RE**: routing-entropy at a single fixed position (the final prompt token).
 - **Confound mechanism**: if later positions systematically have higher RE, longer prompts will have higher mean RE even if content is unrelated.
-
-Operationally: the confound is detected when `rho(all-token RE, level)` is large but `rho(last-token RE, level)` collapses to ~0, while `rho(all-token RE, token_count)` stays large.
-
-## Practical Guidance (For Mech Interp Use)
-
-If you want to use router entropy as a summary statistic:
-- Do not compare prompts of different lengths using all-token means without a position control.
-- Prefer fixed-position metrics (last token, matched boundary tokens) or explicitly stratify by position.
-- Always report `rho(RE, token_count)` alongside any `rho(RE, label)` and treat it as a rival explanation.
 
 ## Raw vs Recalculated (In This Folder)
 
@@ -83,13 +101,12 @@ Some legacy files use historical branch labels like `14q-r1`, `14q-r3`, etc. The
 ## Scope
 
 Core archive:
-- DeepSeek V3.1 hierarchy buildup
-- DeepSeek R1 hierarchy replication
-- R1 generation follow-up
-- Qwen position-control comparison
+- cross-model position confound tables (DeepSeek V3.1 vs Qwen 397B)
+- DeepSeek R1 run artifacts used as an additional cross-check
+- a small per-token position diagnostic suite
 
 Supplemental archive:
-- DeepSeek forced-choice and multiseed runs
-- post-confound methodology notes
+- an external-SSD partial raw recovery (documented in `PARTIAL-RESULTS.md`)
+- adjacent multiseed / v2.2 artifacts kept for forensic completeness
 
 Those supplemental files are preserved because they were adjacent in time, but they are not load-bearing for the token-confound claim.

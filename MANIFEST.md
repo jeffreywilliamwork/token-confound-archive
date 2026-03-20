@@ -1,6 +1,6 @@
 # Manifest
 
-Archive: `experiments/token-confound-archive-mechinterp/`
+Archive: `token-confound-archive/` (this repo)
 Created: 2026-03-20
 Approx. size: `~33MB`
 
@@ -27,7 +27,7 @@ Tangential or post-confound material:
 ## Top-Level Structure
 
 ```
-token-confound-archive-mechinterp/
+token-confound-archive/
   README.md
   NARRATIVE.md
   CROSS_MODEL_POSITION_CONFOUND.md
