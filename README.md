@@ -89,7 +89,7 @@ Core archive:
 - Qwen position-control comparison
 
 Supplemental archive:
-- DeepSeek v2.2 forced-choice and multiseed runs
+- DeepSeek forced-choice and multiseed runs
 - post-confound methodology notes
 
 Those supplemental files are preserved because they were adjacent in time, but they are not load-bearing for the token-confound claim.
