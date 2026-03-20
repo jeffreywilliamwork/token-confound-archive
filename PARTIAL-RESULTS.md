@@ -18,9 +18,9 @@ This file summarizes results in the archive that are only partially recoverable 
 
 ### `ds31-v22-32q-1` raw recovery
 
-Raw router captures were found outside the original archive at:
+Raw router captures were found outside the original archive in an external SSD copy of:
 
-- an external SSD path (not included in this archive): `/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output`
+- `ds31-v22-32q-1/output` (not included in this archive)
 
 These files support a partial recomputation of DeepSeek V3.1 prefill routing entropy using the DeepSeek sigmoid-gated routing reconstruction.
 
@@ -51,7 +51,7 @@ Important scope limit:
 
 ## Best Available RE Numbers for `ds31-v22-32q-1`
 
-From the partial raw recomputation:
+From the partial raw recomputation in `supplemental/recovery/`:
 
 | Level | n | Mean all-token RE | Mean last-token RE | Mean tokens |
 |-------|---|-------------------|--------------------|-------------|

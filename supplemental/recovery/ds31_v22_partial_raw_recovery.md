@@ -1,6 +1,6 @@
 # ds31-v22-32q-1 Partial Raw Recovery
 
-This is a partial raw recomputation from `/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output`.
+This is a partial raw recomputation from an external SSD copy of `ds31-v22-32q-1/output`.
 
 What was recoverable:
 - complete prompts with raw router capture: `17`
@@ -25,10 +25,10 @@ Coverage:
 
 ## Subset Correlations
 
-- all-token RE vs level: `rho=-0.5789612716571944` `p=0.014883237910398958`
-- last-token RE vs level: `rho=0.5817116814987962` `p=0.014303952465020758`
-- all-token RE vs prompt tokens: `rho=-0.6572042169844519` `p=0.004148429286056417`
-- last-token RE vs prompt tokens: `rho=0.5901172080673245` `p=0.012643058728660776`
+- all-token RE vs level: `rho=-0.5790` `p=0.0149`
+- last-token RE vs level: `rho=+0.5817` `p=0.0143`
+- all-token RE vs prompt tokens: `rho=-0.6572` `p=0.0041`
+- last-token RE vs prompt tokens: `rho=+0.5901` `p=0.0126`
 
 These correlations are only for the recoverable subset, so they should not be interpreted as the full run result.
 
@@ -65,5 +65,3 @@ These correlations are only for the recoverable subset, so they should not be in
 - This file recovers raw sigmoid-based RE for the prompts that actually exist on disk.
 - It does not reconstruct the full 32-prompt prefill run.
 - It does not reconstruct the generation-side commitment-token analysis, because these raw captures are prefill-only (`n_tokens_generated=0`).
-- The recovered prompts are tightly templated operational triage tasks, not the open-ended hierarchy prompts used in the main confound story.
-- Within the recovered subset, the main variation is rule complexity inside a largely fixed prompt scaffold, so this file is better read as a recovery and robustness check than as a standalone hierarchy result.

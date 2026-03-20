@@ -20,24 +20,28 @@ probabilities for:
 
 from __future__ import annotations
 
+import argparse
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 
 import numpy as np
 from scipy import stats
 
 
-REPO_ROOT = Path(__file__).resolve().parents[4]
 ARCHIVE_ROOT = Path(__file__).resolve().parents[2]
-OUTPUT_ROOT = Path("/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output")
-SUMMARY_SOURCE = REPO_ROOT / "experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json"
-MANIFEST_SOURCE = REPO_ROOT / "experiments/ds31-v22-32q-1/prompt_manifest_v22.json"
-ROUTER_PATH = REPO_ROOT / "experiments/deepseek/ds31-5cond-1/deepseek_router.py"
+DEFAULT_PARENT_REPO_ROOT = ARCHIVE_ROOT.parent / "llama-eeg-tests"
+DEFAULT_OUTPUT_ROOT = Path("/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output")
+DEFAULT_ROUTER_PATH = DEFAULT_PARENT_REPO_ROOT / "experiments/deepseek/ds31-5cond-1/deepseek_router.py"
+ROUTER_PATH = DEFAULT_ROUTER_PATH
 
 OUT_JSON = ARCHIVE_ROOT / "supplemental/recovery/ds31_v22_partial_raw_recovery.json"
 OUT_MD = ARCHIVE_ROOT / "supplemental/recovery/ds31_v22_partial_raw_recovery.md"
+RAW_OUTPUT_LABEL = "external-ssd:ds31-v22-32q-1/output"
+RAW_OUTPUT_NOTE = "Recovered from an external SSD copy; raw tensors are not included in this archive."
+PARENT_REPO_LABEL = "parent-repo:llama-eeg-tests"
 
 
 def load_deepseek_router():
@@ -145,6 +149,23 @@ def safe_float(value):
     return value
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--parent-repo-root",
+        type=Path,
+        default=Path(os.environ.get("LLAMA_EEG_TESTS_ROOT", DEFAULT_PARENT_REPO_ROOT)),
+        help="Path to the parent llama-eeg-tests repo used for the source summary, manifest, and router helper.",
+    )
+    parser.add_argument(
+        "--output-root",
+        type=Path,
+        default=Path(os.environ.get("DS31_V22_OUTPUT_ROOT", DEFAULT_OUTPUT_ROOT)),
+        help="Path to the recovered raw output tree for ds31-v22-32q-1.",
+    )
+    return parser.parse_args()
+
+
 def build_markdown(result: dict[str, object]) -> str:
     summary = result["summary"]
     level_summary = result["level_summary"]
@@ -156,7 +177,7 @@ def build_markdown(result: dict[str, object]) -> str:
     lines: list[str] = []
     lines.append("# ds31-v22-32q-1 Partial Raw Recovery")
     lines.append("")
-    lines.append("This is a partial raw recomputation from `/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output`.")
+    lines.append("This is a partial raw recomputation from an external SSD copy of `ds31-v22-32q-1/output`.")
     lines.append("")
     lines.append("What was recoverable:")
     lines.append(f"- complete prompts with raw router capture: `{summary['n_complete_prompts']}`")
@@ -185,10 +206,10 @@ def build_markdown(result: dict[str, object]) -> str:
     lines.append("")
     lines.append("## Subset Correlations")
     lines.append("")
-    lines.append(f"- all-token RE vs level: `rho={summary['spearman_prefill_vs_level']['rho']}` `p={summary['spearman_prefill_vs_level']['p']}`")
-    lines.append(f"- last-token RE vs level: `rho={summary['spearman_last_token_vs_level']['rho']}` `p={summary['spearman_last_token_vs_level']['p']}`")
-    lines.append(f"- all-token RE vs prompt tokens: `rho={summary['spearman_prefill_vs_tokens']['rho']}` `p={summary['spearman_prefill_vs_tokens']['p']}`")
-    lines.append(f"- last-token RE vs prompt tokens: `rho={summary['spearman_last_token_vs_tokens']['rho']}` `p={summary['spearman_last_token_vs_tokens']['p']}`")
+    lines.append(f"- all-token RE vs level: `rho={summary['spearman_prefill_vs_level']['rho']:+.4f}` `p={summary['spearman_prefill_vs_level']['p']:.4f}`")
+    lines.append(f"- last-token RE vs level: `rho={summary['spearman_last_token_vs_level']['rho']:+.4f}` `p={summary['spearman_last_token_vs_level']['p']:.4f}`")
+    lines.append(f"- all-token RE vs prompt tokens: `rho={summary['spearman_prefill_vs_tokens']['rho']:+.4f}` `p={summary['spearman_prefill_vs_tokens']['p']:.4f}`")
+    lines.append(f"- last-token RE vs prompt tokens: `rho={summary['spearman_last_token_vs_tokens']['rho']:+.4f}` `p={summary['spearman_last_token_vs_tokens']['p']:.4f}`")
     lines.append("")
     lines.append("These correlations are only for the recoverable subset, so they should not be interpreted as the full run result.")
     lines.append("")
@@ -217,17 +238,26 @@ def build_markdown(result: dict[str, object]) -> str:
 
 
 def main() -> None:
+    args = parse_args()
+    repo_root = args.parent_repo_root
+    output_root = args.output_root
+    summary_source = repo_root / "experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json"
+    manifest_source = repo_root / "experiments/ds31-v22-32q-1/prompt_manifest_v22.json"
+    router_path = repo_root / "experiments/deepseek/ds31-5cond-1/deepseek_router.py"
+
+    global ROUTER_PATH
+    ROUTER_PATH = router_path
     router = load_deepseek_router()
     reconstruct_probs = router.reconstruct_probs
     normalized_entropy = router.normalized_entropy
 
-    manifest = json.loads(MANIFEST_SOURCE.read_text())
+    manifest = json.loads(manifest_source.read_text())
     manifest_prompts = {item["id"]: item for item in manifest["prompts"]}
-    summary_source = json.loads(SUMMARY_SOURCE.read_text())
-    summary_prompts = {item["id"]: item for item in summary_source["per_prompt"]}
+    summary_json = json.loads(summary_source.read_text())
+    summary_prompts = {item["id"]: item for item in summary_json["per_prompt"]}
 
     expected_ids = [item["id"] for item in manifest["prompts"]]
-    prompt_dirs = {p.name: p for p in OUTPUT_ROOT.iterdir() if p.is_dir()}
+    prompt_dirs = {p.name: p for p in output_root.iterdir() if p.is_dir()}
 
     recovered_prompts: list[dict[str, object]] = []
     broken_prompts: list[dict[str, object]] = []
@@ -311,10 +341,11 @@ def main() -> None:
             generation_count_mismatches += 1
 
     result = {
-        "archive_root": str(ARCHIVE_ROOT),
-        "raw_output_root": str(OUTPUT_ROOT),
-        "source_summary_file": str(SUMMARY_SOURCE),
-        "source_manifest_file": str(MANIFEST_SOURCE),
+        "archive_root": ".",
+        "raw_output_root": RAW_OUTPUT_LABEL,
+        "raw_output_note": RAW_OUTPUT_NOTE,
+        "source_summary_file": f"{PARENT_REPO_LABEL}:experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json",
+        "source_manifest_file": f"{PARENT_REPO_LABEL}:experiments/ds31-v22-32q-1/prompt_manifest_v22.json",
         "reconstruction": "sigmoid_noaux_tc_group_filtered_topk_normalized",
         "summary": {
             "n_expected_prompts": len(expected_ids),

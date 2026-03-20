@@ -1,8 +1,9 @@
 {
-  "archive_root": "experiments/token-confound-archive",
-  "raw_output_root": "/Volumes/ExternalSSD/llama-eeg-tests/ds31-v22-32q-1/output",
-  "source_summary_file": "experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json",
-  "source_manifest_file": "experiments/ds31-v22-32q-1/prompt_manifest_v22.json",
+  "archive_root": ".",
+  "raw_output_root": "external-ssd:ds31-v22-32q-1/output",
+  "raw_output_note": "Recovered from an external SSD copy; raw tensors are not included in this archive.",
+  "source_summary_file": "parent-repo:llama-eeg-tests:experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json",
+  "source_manifest_file": "parent-repo:llama-eeg-tests:experiments/ds31-v22-32q-1/prompt_manifest_v22.json",
   "reconstruction": "sigmoid_noaux_tc_group_filtered_topk_normalized",
   "summary": {
     "n_expected_prompts": 32,

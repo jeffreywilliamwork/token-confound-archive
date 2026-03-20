@@ -117,7 +117,7 @@ This material is preserved but not required for the token-confound story.
 
 ## Provenance
 
-Nothing was modified in the original source locations:
+Nothing in this archive was moved or deleted from the original parent research repo. Historical source locations included:
 - `legacy/`
 - `legacy-updated/`
 - pre-existing experiment folders outside this archive
