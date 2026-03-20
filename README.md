@@ -1,4 +1,4 @@
-#!/usr/bin/env markdown
+
 
 # Token-Position Confound in MoE Routing Entropy (Archive)
 
