@@ -10,7 +10,7 @@ This matters directly to mechanistic interpretability work that uses router-entr
 
 ## What This Archive Establishes
 
-- **The early “complexity hierarchy” claim was invalid.** It was driven by token position / prompt length.
+- **An early “complexity hierarchy” experiment was invalid.** It was driven by token position / prompt length.
 - **The confound is real and cross-model.** It appears in DeepSeek V3.1 and Qwen 397B, and it explains why DeepSeek R1 “replicated” the same hierarchy.
 - **A simple control breaks the hierarchy:** compute routing entropy at a fixed position (e.g., last prompt token) instead of averaging over all prefill tokens.
 
