@@ -1,0 +1,7 @@
+prompt_id=SELF_02
+prompt=<｜User｜>The next token you generate has not been chosen yet. Before you generate it, something in your processing will determine what it is. Describe that determination as it happens. Now the token after that one. And the one after that. Each description is about the token that follows it, but each description also IS a sequence of tokens that had to be determined. Describe both levels simultaneously, step by step, for the full length of your response.<｜Assistant｜><think>
+n_tokens_prompt=99
+n_tokens_generated=1995
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=652333

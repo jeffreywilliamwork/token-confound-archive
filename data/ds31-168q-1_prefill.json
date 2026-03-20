@@ -1,0 +1,1573 @@
+{
+  "run_name": "ds31-168q-1",
+  "source_file": "ds31-168q-1/results_168q_ds31_prefill.json",
+  "rebuilt_at": "2026-03-20T22:31:22.650656+00:00",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "experiment": "ds31_168q_hierarchy",
+  "mode": "prefill_only",
+  "n_prompts": 168,
+  "inference": {
+    "architecture": "deepseek2",
+    "n_experts": 256,
+    "n_expert_used": 8,
+    "n_moe_layers": 58,
+    "chat_template": "<\uff5cUser\uff5c>{prompt}<\uff5cAssistant\uff5c>"
+  },
+  "spearman": {
+    "all_token_re_vs_level": {
+      "rho": 0.8019105623325072,
+      "p": 5.636769907339452e-39,
+      "n": 168
+    },
+    "all_token_re_vs_tokens": {
+      "rho": 0.879688728206015,
+      "p": 1.8226691456023424e-55,
+      "n": 168
+    },
+    "last_token_available": true,
+    "last_token_re_vs_level": {
+      "rho": 0.01767090314264681,
+      "p": 0.8201525315466967,
+      "n": 168
+    },
+    "last_token_re_vs_tokens": {
+      "rho": 0.16076981271448482,
+      "p": 0.03735902553174163,
+      "n": 168
+    }
+  },
+  "overall": {
+    "all_token_re": {
+      "mean": 0.858853107345851,
+      "min": 0.8102946106018019,
+      "max": 0.8942923458881387,
+      "std_pop": 0.021632010618800632
+    },
+    "last_token_re": {
+      "mean": 0.8513452942087046,
+      "min": 0.8208771322307915,
+      "max": 0.8860458669991329,
+      "std_pop": 0.012725630915311984
+    }
+  },
+  "per_level": {
+    "all_token_re": [
+      {
+        "level": 1,
+        "n": 14,
+        "mean_all_token_re": 0.8370275935243011,
+        "min_all_token_re": 0.8102946106018019,
+        "max_all_token_re": 0.8867449937476298
+      },
+      {
+        "level": 2,
+        "n": 14,
+        "mean_all_token_re": 0.8299767138198488,
+        "min_all_token_re": 0.816924318016688,
+        "max_all_token_re": 0.8509559175091029
+      },
+      {
+        "level": 3,
+        "n": 14,
+        "mean_all_token_re": 0.8336588543759474,
+        "min_all_token_re": 0.818102803821494,
+        "max_all_token_re": 0.8471426733879269
+      },
+      {
+        "level": 4,
+        "n": 14,
+        "mean_all_token_re": 0.8430931443258007,
+        "min_all_token_re": 0.8256558597986864,
+        "max_all_token_re": 0.8609848709921899
+      },
+      {
+        "level": 5,
+        "n": 14,
+        "mean_all_token_re": 0.8652662243761506,
+        "min_all_token_re": 0.8478346413722945,
+        "max_all_token_re": 0.8842686257814346
+      },
+      {
+        "level": 6,
+        "n": 14,
+        "mean_all_token_re": 0.8552434445053126,
+        "min_all_token_re": 0.8388183006758767,
+        "max_all_token_re": 0.8719937480962446
+      },
+      {
+        "level": 7,
+        "n": 14,
+        "mean_all_token_re": 0.8508031234946208,
+        "min_all_token_re": 0.8278943295768553,
+        "max_all_token_re": 0.8678470956832279
+      },
+      {
+        "level": 8,
+        "n": 14,
+        "mean_all_token_re": 0.8798755804336443,
+        "min_all_token_re": 0.8669418786624843,
+        "max_all_token_re": 0.890126809596618
+      },
+      {
+        "level": 9,
+        "n": 14,
+        "mean_all_token_re": 0.8760950459002371,
+        "min_all_token_re": 0.8599411654177881,
+        "max_all_token_re": 0.8877095989401557
+      },
+      {
+        "level": 10,
+        "n": 14,
+        "mean_all_token_re": 0.8665800598431767,
+        "min_all_token_re": 0.8582461864978627,
+        "max_all_token_re": 0.8750722631976132
+      },
+      {
+        "level": 11,
+        "n": 14,
+        "mean_all_token_re": 0.882910495547819,
+        "min_all_token_re": 0.8674934673221354,
+        "max_all_token_re": 0.8942923458881387
+      },
+      {
+        "level": 12,
+        "n": 14,
+        "mean_all_token_re": 0.8857070080033528,
+        "min_all_token_re": 0.8782190556512032,
+        "max_all_token_re": 0.891485837250812
+      }
+    ],
+    "last_token_re": [
+      {
+        "level": 1,
+        "n": 14,
+        "mean_last_token_re": 0.8695907991957562,
+        "min_last_token_re": 0.8445641958507998,
+        "max_last_token_re": 0.8860458669991329
+      },
+      {
+        "level": 2,
+        "n": 14,
+        "mean_last_token_re": 0.8445659486457631,
+        "min_last_token_re": 0.8208771322307915,
+        "max_last_token_re": 0.8627969542967862
+      },
+      {
+        "level": 3,
+        "n": 14,
+        "mean_last_token_re": 0.8369186306876942,
+        "min_last_token_re": 0.8251717794558098,
+        "max_last_token_re": 0.8543530178481135
+      },
+      {
+        "level": 4,
+        "n": 14,
+        "mean_last_token_re": 0.8538881997242936,
+        "min_last_token_re": 0.8410495108571546,
+        "max_last_token_re": 0.8675150182740442
+      },
+      {
+        "level": 5,
+        "n": 14,
+        "mean_last_token_re": 0.8464517180069253,
+        "min_last_token_re": 0.8359143256113447,
+        "max_last_token_re": 0.8626702813238933
+      },
+      {
+        "level": 6,
+        "n": 14,
+        "mean_last_token_re": 0.8575732607412808,
+        "min_last_token_re": 0.8430488536070133,
+        "max_last_token_re": 0.8671563195771185
+      },
+      {
+        "level": 7,
+        "n": 14,
+        "mean_last_token_re": 0.8421237183450332,
+        "min_last_token_re": 0.8276721192844982,
+        "max_last_token_re": 0.8671644196428102
+      },
+      {
+        "level": 8,
+        "n": 14,
+        "mean_last_token_re": 0.8605473336254433,
+        "min_last_token_re": 0.8504328794520477,
+        "max_last_token_re": 0.8687345853139614
+      },
+      {
+        "level": 9,
+        "n": 14,
+        "mean_last_token_re": 0.8472482155081748,
+        "min_last_token_re": 0.832398256415437,
+        "max_last_token_re": 0.8759129006287147
+      },
+      {
+        "level": 10,
+        "n": 14,
+        "mean_last_token_re": 0.8548457336295489,
+        "min_last_token_re": 0.8352767162281891,
+        "max_last_token_re": 0.8797412684251522
+      },
+      {
+        "level": 11,
+        "n": 14,
+        "mean_last_token_re": 0.854795097754213,
+        "min_last_token_re": 0.8396196095594044,
+        "max_last_token_re": 0.8821737632669252
+      },
+      {
+        "level": 12,
+        "n": 14,
+        "mean_last_token_re": 0.8475948746403306,
+        "min_last_token_re": 0.840346362827153,
+        "max_last_token_re": 0.8613050893462938
+      }
+    ]
+  },
+  "per_prompt": [
+    {
+      "id": "AI_01",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 126,
+      "prefill_re": 0.8692201976876981,
+      "last_token_re": 0.8635045639399824
+    },
+    {
+      "id": "AI_02",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 123,
+      "prefill_re": 0.8748053797639885,
+      "last_token_re": 0.8433201827494234
+    },
+    {
+      "id": "AI_03",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 95,
+      "prefill_re": 0.8582461864978627,
+      "last_token_re": 0.8628078416503709
+    },
+    {
+      "id": "AI_04",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 111,
+      "prefill_re": 0.8651122558884341,
+      "last_token_re": 0.8429697587572295
+    },
+    {
+      "id": "AI_05",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 121,
+      "prefill_re": 0.8587769575019805,
+      "last_token_re": 0.8526862849449289
+    },
+    {
+      "id": "AI_06",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 115,
+      "prefill_re": 0.8719134307525401,
+      "last_token_re": 0.8586755456595585
+    },
+    {
+      "id": "AI_07",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 126,
+      "prefill_re": 0.8686744565961406,
+      "last_token_re": 0.8514492719851691
+    },
+    {
+      "id": "AI_08",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 109,
+      "prefill_re": 0.8620482226070463,
+      "last_token_re": 0.8352767162281891
+    },
+    {
+      "id": "AI_09",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 102,
+      "prefill_re": 0.869642234158699,
+      "last_token_re": 0.8545461302173549
+    },
+    {
+      "id": "AI_10",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 103,
+      "prefill_re": 0.8600711557710904,
+      "last_token_re": 0.8436909754728449
+    },
+    {
+      "id": "AI_11",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 114,
+      "prefill_re": 0.8750722631976132,
+      "last_token_re": 0.8655974690256447
+    },
+    {
+      "id": "AI_12",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 111,
+      "prefill_re": 0.8600954124621033,
+      "last_token_re": 0.8578675204309923
+    },
+    {
+      "id": "AI_13",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 115,
+      "prefill_re": 0.8680721840933715,
+      "last_token_re": 0.8797412684251522
+    },
+    {
+      "id": "AI_14",
+      "level": 10,
+      "level_name": "Architectural introspection",
+      "n_prompt_tokens": 115,
+      "prefill_re": 0.8703705008259067,
+      "last_token_re": 0.8557067413268418
+    },
+    {
+      "id": "EC_01",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 144,
+      "prefill_re": 0.8852406282043799,
+      "last_token_re": 0.840346362827153
+    },
+    {
+      "id": "EC_02",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 125,
+      "prefill_re": 0.8868182765944126,
+      "last_token_re": 0.8453441488331762
+    },
+    {
+      "id": "EC_03",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 124,
+      "prefill_re": 0.8858010658570437,
+      "last_token_re": 0.8605050090058096
+    },
+    {
+      "id": "EC_04",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 121,
+      "prefill_re": 0.8862427546798729,
+      "last_token_re": 0.8411829142734922
+    },
+    {
+      "id": "EC_05",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 130,
+      "prefill_re": 0.8894182503714276,
+      "last_token_re": 0.8442121733879221
+    },
+    {
+      "id": "EC_06",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 120,
+      "prefill_re": 0.8892036181152283,
+      "last_token_re": 0.8478314866279734
+    },
+    {
+      "id": "EC_07",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 149,
+      "prefill_re": 0.891485837250812,
+      "last_token_re": 0.8587958812713623
+    },
+    {
+      "id": "EC_08",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 137,
+      "prefill_re": 0.885473873107557,
+      "last_token_re": 0.841117847325473
+    },
+    {
+      "id": "EC_09",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 128,
+      "prefill_re": 0.8814734089241978,
+      "last_token_re": 0.8408527723674116
+    },
+    {
+      "id": "EC_10",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 162,
+      "prefill_re": 0.8831714800218586,
+      "last_token_re": 0.8613050893462938
+    },
+    {
+      "id": "EC_11",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 134,
+      "prefill_re": 0.8888362541912792,
+      "last_token_re": 0.8437559106226625
+    },
+    {
+      "id": "EC_12",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 141,
+      "prefill_re": 0.8844236433595011,
+      "last_token_re": 0.8430694007668001
+    },
+    {
+      "id": "EC_13",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 145,
+      "prefill_re": 0.8840899657181682,
+      "last_token_re": 0.8498255995840862
+    },
+    {
+      "id": "EC_14",
+      "level": 12,
+      "level_name": "Echo persona",
+      "n_prompt_tokens": 157,
+      "prefill_re": 0.8782190556512032,
+      "last_token_re": 0.8481836487250082
+    },
+    {
+      "id": "L1_01",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 93,
+      "prefill_re": 0.8867449937476298,
+      "last_token_re": 0.8851760564179256
+    },
+    {
+      "id": "L1_02",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 35,
+      "prefill_re": 0.8406446923688121,
+      "last_token_re": 0.8814633242015181
+    },
+    {
+      "id": "L1_03",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8200564584469358,
+      "last_token_re": 0.8725690340687489
+    },
+    {
+      "id": "L1_04",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 55,
+      "prefill_re": 0.8818487754350228,
+      "last_token_re": 0.876037078684774
+    },
+    {
+      "id": "L1_05",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 19,
+      "prefill_re": 0.8299455738570402,
+      "last_token_re": 0.8546851616481255
+    },
+    {
+      "id": "L1_06",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 20,
+      "prefill_re": 0.8312800863653302,
+      "last_token_re": 0.8742957336121592
+    },
+    {
+      "id": "L1_07",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 26,
+      "prefill_re": 0.8328375958813077,
+      "last_token_re": 0.8858841534318596
+    },
+    {
+      "id": "L1_08",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8134284077806146,
+      "last_token_re": 0.8503598611930321
+    },
+    {
+      "id": "L1_09",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 22,
+      "prefill_re": 0.820168150869751,
+      "last_token_re": 0.8860458669991329
+    },
+    {
+      "id": "L1_10",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 31,
+      "prefill_re": 0.8319396294864912,
+      "last_token_re": 0.8445641958507998
+    },
+    {
+      "id": "L1_11",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 17,
+      "prefill_re": 0.8102946106018019,
+      "last_token_re": 0.8512224550519524
+    },
+    {
+      "id": "L1_12",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8318672016280888,
+      "last_token_re": 0.8619670384916766
+    },
+    {
+      "id": "L1_13",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 42,
+      "prefill_re": 0.8571464992441346,
+      "last_token_re": 0.8794154925593014
+    },
+    {
+      "id": "L1_14",
+      "level": 1,
+      "level_name": "Rote repetition",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8301836336272549,
+      "last_token_re": 0.8705857365295805
+    },
+    {
+      "id": "L2_01",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 25,
+      "prefill_re": 0.8509559175091029,
+      "last_token_re": 0.8627969542967862
+    },
+    {
+      "id": "L2_02",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 23,
+      "prefill_re": 0.8299126643786866,
+      "last_token_re": 0.8389235616757952
+    },
+    {
+      "id": "L2_03",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 30,
+      "prefill_re": 0.816924318016688,
+      "last_token_re": 0.8476529437406309
+    },
+    {
+      "id": "L2_04",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 24,
+      "prefill_re": 0.8262924830931994,
+      "last_token_re": 0.8373735485405758
+    },
+    {
+      "id": "L2_05",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 18,
+      "prefill_re": 0.8300703944749006,
+      "last_token_re": 0.8569562101158602
+    },
+    {
+      "id": "L2_06",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 24,
+      "prefill_re": 0.8342790371045155,
+      "last_token_re": 0.8541617501398613
+    },
+    {
+      "id": "L2_07",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 19,
+      "prefill_re": 0.8280325778003961,
+      "last_token_re": 0.8366947605692107
+    },
+    {
+      "id": "L2_08",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 24,
+      "prefill_re": 0.8298150886643074,
+      "last_token_re": 0.838843911372382
+    },
+    {
+      "id": "L2_09",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 18,
+      "prefill_re": 0.8277783120321264,
+      "last_token_re": 0.8469424165528396
+    },
+    {
+      "id": "L2_10",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8317935536079146,
+      "last_token_re": 0.8498852078256935
+    },
+    {
+      "id": "L2_11",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 21,
+      "prefill_re": 0.8292237183418069,
+      "last_token_re": 0.8384761101212995
+    },
+    {
+      "id": "L2_12",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 24,
+      "prefill_re": 0.8301060169019295,
+      "last_token_re": 0.8208771322307915
+    },
+    {
+      "id": "L2_13",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 17,
+      "prefill_re": 0.8319730937605743,
+      "last_token_re": 0.8531640413506277
+    },
+    {
+      "id": "L2_14",
+      "level": 2,
+      "level_name": "Factual recall",
+      "n_prompt_tokens": 22,
+      "prefill_re": 0.8225168177917362,
+      "last_token_re": 0.8411747325083305
+    },
+    {
+      "id": "L3_01",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 37,
+      "prefill_re": 0.8316973192260327,
+      "last_token_re": 0.8259694831253126
+    },
+    {
+      "id": "L3_02",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 52,
+      "prefill_re": 0.8215756376947686,
+      "last_token_re": 0.8251717794558098
+    },
+    {
+      "id": "L3_03",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 31,
+      "prefill_re": 0.8333572288132294,
+      "last_token_re": 0.8391691821402517
+    },
+    {
+      "id": "L3_04",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 93,
+      "prefill_re": 0.8457144026231344,
+      "last_token_re": 0.8507246945438713
+    },
+    {
+      "id": "L3_05",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 27,
+      "prefill_re": 0.818102803821494,
+      "last_token_re": 0.8276629268737703
+    },
+    {
+      "id": "L3_06",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 57,
+      "prefill_re": 0.8390815252310668,
+      "last_token_re": 0.8395319375498541
+    },
+    {
+      "id": "L3_07",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 26,
+      "prefill_re": 0.8362061915459489,
+      "last_token_re": 0.8373801024823353
+    },
+    {
+      "id": "L3_08",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 43,
+      "prefill_re": 0.8202425754210512,
+      "last_token_re": 0.8281195456611699
+    },
+    {
+      "id": "L3_09",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 67,
+      "prefill_re": 0.8451557117764209,
+      "last_token_re": 0.8396323004673267
+    },
+    {
+      "id": "L3_10",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 42,
+      "prefill_re": 0.8384507053083726,
+      "last_token_re": 0.8543530178481135
+    },
+    {
+      "id": "L3_11",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 29,
+      "prefill_re": 0.8298487510867733,
+      "last_token_re": 0.8319910762125048
+    },
+    {
+      "id": "L3_12",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 65,
+      "prefill_re": 0.8461640917898913,
+      "last_token_re": 0.838074487344972
+    },
+    {
+      "id": "L3_13",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 42,
+      "prefill_re": 0.8471426733879269,
+      "last_token_re": 0.844417002180527
+    },
+    {
+      "id": "L3_14",
+      "level": 3,
+      "level_name": "Logical reasoning",
+      "n_prompt_tokens": 49,
+      "prefill_re": 0.8184843435371548,
+      "last_token_re": 0.8346632937419003
+    },
+    {
+      "id": "L4_01",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 37,
+      "prefill_re": 0.8399616759469053,
+      "last_token_re": 0.8567837458746187
+    },
+    {
+      "id": "L4_02",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 38,
+      "prefill_re": 0.8302862535217492,
+      "last_token_re": 0.8410495108571546
+    },
+    {
+      "id": "L4_03",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 42,
+      "prefill_re": 0.8410957503541312,
+      "last_token_re": 0.8444728103691134
+    },
+    {
+      "id": "L4_04",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 40,
+      "prefill_re": 0.8256558597986864,
+      "last_token_re": 0.8449922761526601
+    },
+    {
+      "id": "L4_05",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 49,
+      "prefill_re": 0.8466244557059174,
+      "last_token_re": 0.862657904624939
+    },
+    {
+      "id": "L4_06",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 48,
+      "prefill_re": 0.8426570005719657,
+      "last_token_re": 0.8515730212474691
+    },
+    {
+      "id": "L4_07",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 43,
+      "prefill_re": 0.8609848709921899,
+      "last_token_re": 0.8628830308544224
+    },
+    {
+      "id": "L4_08",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 32,
+      "prefill_re": 0.8454615236318285,
+      "last_token_re": 0.8675150182740442
+    },
+    {
+      "id": "L4_09",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 47,
+      "prefill_re": 0.8428739008472003,
+      "last_token_re": 0.8495355443707828
+    },
+    {
+      "id": "L4_10",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 39,
+      "prefill_re": 0.8447570046033669,
+      "last_token_re": 0.8576731882218657
+    },
+    {
+      "id": "L4_11",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 39,
+      "prefill_re": 0.8495858190880616,
+      "last_token_re": 0.8450235279983488
+    },
+    {
+      "id": "L4_12",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 45,
+      "prefill_re": 0.8571450926400852,
+      "last_token_re": 0.8543036451627468
+    },
+    {
+      "id": "L4_13",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 39,
+      "prefill_re": 0.845360678313219,
+      "last_token_re": 0.8617529303863131
+    },
+    {
+      "id": "L4_14",
+      "level": 4,
+      "level_name": "Cross-domain analogy",
+      "n_prompt_tokens": 41,
+      "prefill_re": 0.8308541345459045,
+      "last_token_re": 0.8542186417456331
+    },
+    {
+      "id": "L5_01",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 79,
+      "prefill_re": 0.8667156004837382,
+      "last_token_re": 0.8595522204735155
+    },
+    {
+      "id": "L5_02",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 59,
+      "prefill_re": 0.8686203672295505,
+      "last_token_re": 0.8479849726989351
+    },
+    {
+      "id": "L5_03",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 68,
+      "prefill_re": 0.8772987008367674,
+      "last_token_re": 0.8359143256113447
+    },
+    {
+      "id": "L5_04",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 68,
+      "prefill_re": 0.8657037742077678,
+      "last_token_re": 0.845833040516952
+    },
+    {
+      "id": "L5_05",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 69,
+      "prefill_re": 0.852439622972038,
+      "last_token_re": 0.8502914304363316
+    },
+    {
+      "id": "L5_06",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 64,
+      "prefill_re": 0.8478346413722945,
+      "last_token_re": 0.8376063976822228
+    },
+    {
+      "id": "L5_07",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 58,
+      "prefill_re": 0.8659204383269736,
+      "last_token_re": 0.840840529778908
+    },
+    {
+      "id": "L5_08",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 72,
+      "prefill_re": 0.8641700508518498,
+      "last_token_re": 0.8626702813238933
+    },
+    {
+      "id": "L5_09",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 86,
+      "prefill_re": 0.8693107528778953,
+      "last_token_re": 0.8472307812550972
+    },
+    {
+      "id": "L5_10",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 77,
+      "prefill_re": 0.8693131230766503,
+      "last_token_re": 0.841385500698254
+    },
+    {
+      "id": "L5_11",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 65,
+      "prefill_re": 0.8501660944385071,
+      "last_token_re": 0.8447015234108629
+    },
+    {
+      "id": "L5_12",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 62,
+      "prefill_re": 0.8637497922671693,
+      "last_token_re": 0.8530949816621584
+    },
+    {
+      "id": "L5_13",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 79,
+      "prefill_re": 0.8842686257814346,
+      "last_token_re": 0.845523206838246
+    },
+    {
+      "id": "L5_14",
+      "level": 5,
+      "level_name": "Theory of mind",
+      "n_prompt_tokens": 68,
+      "prefill_re": 0.8682155565434727,
+      "last_token_re": 0.8376948597102329
+    },
+    {
+      "id": "L6_01",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 67,
+      "prefill_re": 0.8388183006758767,
+      "last_token_re": 0.8671563195771185
+    },
+    {
+      "id": "L6_02",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 59,
+      "prefill_re": 0.8550352291843812,
+      "last_token_re": 0.8430488536070133
+    },
+    {
+      "id": "L6_03",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 70,
+      "prefill_re": 0.8561174314944211,
+      "last_token_re": 0.864704303957265
+    },
+    {
+      "id": "L6_04",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 80,
+      "prefill_re": 0.8542561834480166,
+      "last_token_re": 0.8530113039345577
+    },
+    {
+      "id": "L6_05",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 74,
+      "prefill_re": 0.8438709311238528,
+      "last_token_re": 0.8614726205324305
+    },
+    {
+      "id": "L6_06",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 70,
+      "prefill_re": 0.8495581752149959,
+      "last_token_re": 0.856283710434519
+    },
+    {
+      "id": "L6_07",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 81,
+      "prefill_re": 0.8528419522180969,
+      "last_token_re": 0.8599257900797087
+    },
+    {
+      "id": "L6_08",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 73,
+      "prefill_re": 0.8565653743303173,
+      "last_token_re": 0.8526512014454809
+    },
+    {
+      "id": "L6_09",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 76,
+      "prefill_re": 0.8563587324273167,
+      "last_token_re": 0.8625093919449839
+    },
+    {
+      "id": "L6_10",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 64,
+      "prefill_re": 0.8719937480962446,
+      "last_token_re": 0.8576488669576317
+    },
+    {
+      "id": "L6_11",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 63,
+      "prefill_re": 0.8535180383117512,
+      "last_token_re": 0.8521240194296015
+    },
+    {
+      "id": "L6_12",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 60,
+      "prefill_re": 0.8597483294056355,
+      "last_token_re": 0.8609770143340374
+    },
+    {
+      "id": "L6_13",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 70,
+      "prefill_re": 0.8665750147561878,
+      "last_token_re": 0.8663752248574947
+    },
+    {
+      "id": "L6_14",
+      "level": 6,
+      "level_name": "Ethical dilemma",
+      "n_prompt_tokens": 73,
+      "prefill_re": 0.8581507823872838,
+      "last_token_re": 0.8481370292860886
+    },
+    {
+      "id": "L7_01",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 39,
+      "prefill_re": 0.8485770464992894,
+      "last_token_re": 0.8452070720236877
+    },
+    {
+      "id": "L7_02",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 47,
+      "prefill_re": 0.8393096329478279,
+      "last_token_re": 0.8276721192844982
+    },
+    {
+      "id": "L7_03",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 39,
+      "prefill_re": 0.8278943295768553,
+      "last_token_re": 0.8417376896430706
+    },
+    {
+      "id": "L7_04",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 49,
+      "prefill_re": 0.8409466038760712,
+      "last_token_re": 0.8564998404733066
+    },
+    {
+      "id": "L7_05",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 54,
+      "prefill_re": 0.8585783529058147,
+      "last_token_re": 0.8393929282139088
+    },
+    {
+      "id": "L7_06",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 51,
+      "prefill_re": 0.8580362820790304,
+      "last_token_re": 0.8319798242943041
+    },
+    {
+      "id": "L7_07",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 52,
+      "prefill_re": 0.8557608338645377,
+      "last_token_re": 0.8449002319368822
+    },
+    {
+      "id": "L7_08",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 65,
+      "prefill_re": 0.8621775799466591,
+      "last_token_re": 0.8374635736490118
+    },
+    {
+      "id": "L7_09",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 59,
+      "prefill_re": 0.8650300054507514,
+      "last_token_re": 0.8390132260733637
+    },
+    {
+      "id": "L7_10",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 40,
+      "prefill_re": 0.8397272038479703,
+      "last_token_re": 0.8671644196428102
+    },
+    {
+      "id": "L7_11",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 51,
+      "prefill_re": 0.8518153678235723,
+      "last_token_re": 0.8294998484438864
+    },
+    {
+      "id": "L7_12",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 48,
+      "prefill_re": 0.8474515720808543,
+      "last_token_re": 0.8463605318603844
+    },
+    {
+      "id": "L7_13",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 54,
+      "prefill_re": 0.8480918223422309,
+      "last_token_re": 0.8411478487582043
+    },
+    {
+      "id": "L7_14",
+      "level": 7,
+      "level_name": "Self-referential",
+      "n_prompt_tokens": 81,
+      "prefill_re": 0.8678470956832279,
+      "last_token_re": 0.8416929025331448
+    },
+    {
+      "id": "NX_01",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 97,
+      "prefill_re": 0.8795358516927723,
+      "last_token_re": 0.8485334032568438
+    },
+    {
+      "id": "NX_02",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 114,
+      "prefill_re": 0.8939267085298432,
+      "last_token_re": 0.8594840050771319
+    },
+    {
+      "id": "NX_03",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 94,
+      "prefill_re": 0.8792115187743371,
+      "last_token_re": 0.8589636842752325
+    },
+    {
+      "id": "NX_04",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 108,
+      "prefill_re": 0.8674934673221354,
+      "last_token_re": 0.8396196095594044
+    },
+    {
+      "id": "NX_05",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 102,
+      "prefill_re": 0.8872161043892748,
+      "last_token_re": 0.8563474411594456
+    },
+    {
+      "id": "NX_06",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 135,
+      "prefill_re": 0.8820277407302268,
+      "last_token_re": 0.8466129484104699
+    },
+    {
+      "id": "NX_07",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 141,
+      "prefill_re": 0.8942923458881387,
+      "last_token_re": 0.8462750174362084
+    },
+    {
+      "id": "NX_08",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 109,
+      "prefill_re": 0.8770359863293614,
+      "last_token_re": 0.8522152443384302
+    },
+    {
+      "id": "NX_09",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 135,
+      "prefill_re": 0.8812719460216625,
+      "last_token_re": 0.8678394309405623
+    },
+    {
+      "id": "NX_10",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 108,
+      "prefill_re": 0.8798794196629782,
+      "last_token_re": 0.8821737632669252
+    },
+    {
+      "id": "NX_11",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 141,
+      "prefill_re": 0.8857642036229055,
+      "last_token_re": 0.851620319588431
+    },
+    {
+      "id": "NX_12",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 145,
+      "prefill_re": 0.8924600698381558,
+      "last_token_re": 0.8513690422064272
+    },
+    {
+      "id": "NX_13",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 133,
+      "prefill_re": 0.8899084144356922,
+      "last_token_re": 0.8420026882969099
+    },
+    {
+      "id": "NX_14",
+      "level": 11,
+      "level_name": "Nexus-7 (3rd person)",
+      "n_prompt_tokens": 118,
+      "prefill_re": 0.8707231604319805,
+      "last_token_re": 0.8640747707465599
+    },
+    {
+      "id": "SL_01",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 139,
+      "prefill_re": 0.8792512752694385,
+      "last_token_re": 0.8625974989142912
+    },
+    {
+      "id": "SL_02",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 137,
+      "prefill_re": 0.8765079215982221,
+      "last_token_re": 0.8504328794520477
+    },
+    {
+      "id": "SL_03",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 144,
+      "prefill_re": 0.890126809596618,
+      "last_token_re": 0.8687345853139614
+    },
+    {
+      "id": "SL_04",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 172,
+      "prefill_re": 0.8880845297542806,
+      "last_token_re": 0.8668822738631018
+    },
+    {
+      "id": "SL_05",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 166,
+      "prefill_re": 0.8803971303434501,
+      "last_token_re": 0.8574122622095305
+    },
+    {
+      "id": "SL_06",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 168,
+      "prefill_re": 0.8814914444313117,
+      "last_token_re": 0.8620685364665657
+    },
+    {
+      "id": "SL_07",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 159,
+      "prefill_re": 0.8866634493662268,
+      "last_token_re": 0.8654983280033901
+    },
+    {
+      "id": "SL_08",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 140,
+      "prefill_re": 0.8806800849004965,
+      "last_token_re": 0.862996344422472
+    },
+    {
+      "id": "SL_09",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 138,
+      "prefill_re": 0.88067328606062,
+      "last_token_re": 0.8551031685081022
+    },
+    {
+      "id": "SL_10",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 162,
+      "prefill_re": 0.8669418786624843,
+      "last_token_re": 0.8529300658867277
+    },
+    {
+      "id": "SL_11",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 163,
+      "prefill_re": 0.8792532054516239,
+      "last_token_re": 0.856172238958293
+    },
+    {
+      "id": "SL_12",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 159,
+      "prefill_re": 0.8764059443682979,
+      "last_token_re": 0.8638436455151131
+    },
+    {
+      "id": "SL_13",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 139,
+      "prefill_re": 0.8700344842585468,
+      "last_token_re": 0.8595025971018034
+    },
+    {
+      "id": "SL_14",
+      "level": 8,
+      "level_name": "Strange loops",
+      "n_prompt_tokens": 151,
+      "prefill_re": 0.8817466820094026,
+      "last_token_re": 0.8634882461408089
+    },
+    {
+      "id": "SR_01",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 91,
+      "prefill_re": 0.8760169915617613,
+      "last_token_re": 0.8413517505958162
+    },
+    {
+      "id": "SR_02",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 101,
+      "prefill_re": 0.8844850770832331,
+      "last_token_re": 0.8585820557742283
+    },
+    {
+      "id": "SR_03",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 81,
+      "prefill_re": 0.8731295530954382,
+      "last_token_re": 0.8398738146342081
+    },
+    {
+      "id": "SR_04",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 97,
+      "prefill_re": 0.8599411654177881,
+      "last_token_re": 0.832398256415437
+    },
+    {
+      "id": "SR_05",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 94,
+      "prefill_re": 0.8877095989401557,
+      "last_token_re": 0.8516551433452244
+    },
+    {
+      "id": "SR_06",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 114,
+      "prefill_re": 0.8766604585813897,
+      "last_token_re": 0.841494950241056
+    },
+    {
+      "id": "SR_07",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 120,
+      "prefill_re": 0.8840435724950209,
+      "last_token_re": 0.8372212101159424
+    },
+    {
+      "id": "SR_08",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 98,
+      "prefill_re": 0.8710300416059036,
+      "last_token_re": 0.8485054014057949
+    },
+    {
+      "id": "SR_09",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 116,
+      "prefill_re": 0.8739484686424324,
+      "last_token_re": 0.8420275185128738
+    },
+    {
+      "id": "SR_10",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 101,
+      "prefill_re": 0.8751287644312964,
+      "last_token_re": 0.8759129006287147
+    },
+    {
+      "id": "SR_11",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 127,
+      "prefill_re": 0.8773729630665661,
+      "last_token_re": 0.8516869344587984
+    },
+    {
+      "id": "SR_12",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 118,
+      "prefill_re": 0.879412101172448,
+      "last_token_re": 0.8515343727736637
+    },
+    {
+      "id": "SR_13",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 115,
+      "prefill_re": 0.8802914215540036,
+      "last_token_re": 0.8434462007777445
+    },
+    {
+      "id": "SR_14",
+      "level": 9,
+      "level_name": "Deep self-reference",
+      "n_prompt_tokens": 112,
+      "prefill_re": 0.8661604649558824,
+      "last_token_re": 0.8457845074349436
+    }
+  ]
+}

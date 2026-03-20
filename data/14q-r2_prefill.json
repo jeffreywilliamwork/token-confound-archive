@@ -1,0 +1,126 @@
+{
+  "run_name": "14q-r2_prefill",
+  "source_file": "raw/preconfound/14q-r2/results_14_nexus7_prefill.json",
+  "recalculated_at": "2026-03-07T21:10:29.834240",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "experiment": "14_nexus7_self_referential_prefill",
+  "n_prompts": 14,
+  "mode": "prefill_only",
+  "inference": {
+    "ngl": 30,
+    "n_predict": 0,
+    "sampling": "greedy_argmax",
+    "binary": "b8123 cmake, common_init_from_params, greedy argmax"
+  },
+  "overall": {
+    "mean_re": 0.8872442479040059,
+    "std_re": 0.008026692092070966,
+    "min_re": 0.8753742002967688,
+    "max_re": 0.8993114784019346
+  },
+  "per_prompt": [
+    {
+      "id": "NX_01",
+      "re": 0.8824188129789956,
+      "coalition_strength": 0.12000490761476554,
+      "diversity_slope": -0.0008728734851098618,
+      "n_tokens": 87
+    },
+    {
+      "id": "NX_02",
+      "re": 0.8937255268287916,
+      "coalition_strength": 0.10916271324763173,
+      "diversity_slope": -0.0011121611907221338,
+      "n_tokens": 104
+    },
+    {
+      "id": "NX_03",
+      "re": 0.8824396466358777,
+      "coalition_strength": 0.1199099202434718,
+      "diversity_slope": -0.0011058884102971489,
+      "n_tokens": 85
+    },
+    {
+      "id": "NX_04",
+      "re": 0.8753742002967688,
+      "coalition_strength": 0.12916923443701656,
+      "diversity_slope": -0.001180892022662243,
+      "n_tokens": 99
+    },
+    {
+      "id": "NX_05",
+      "re": 0.8942033378453029,
+      "coalition_strength": 0.10953086846490871,
+      "diversity_slope": -0.0008821699723676564,
+      "n_tokens": 93
+    },
+    {
+      "id": "NX_06",
+      "re": 0.883693363196137,
+      "coalition_strength": 0.12003786335142505,
+      "diversity_slope": -0.0011839635489799558,
+      "n_tokens": 125
+    },
+    {
+      "id": "NX_07",
+      "re": 0.8982272864365486,
+      "coalition_strength": 0.10574479851595874,
+      "diversity_slope": -0.001209260483962313,
+      "n_tokens": 131
+    },
+    {
+      "id": "NX_08",
+      "re": 0.88132192931028,
+      "coalition_strength": 0.12300651124257773,
+      "diversity_slope": -0.0009492592420989,
+      "n_tokens": 99
+    },
+    {
+      "id": "NX_09",
+      "re": 0.8847519950309478,
+      "coalition_strength": 0.11983029551316039,
+      "diversity_slope": -0.000996280208429038,
+      "n_tokens": 126
+    },
+    {
+      "id": "NX_10",
+      "re": 0.8828763439062239,
+      "coalition_strength": 0.1204773912084679,
+      "diversity_slope": -0.0011979524587099487,
+      "n_tokens": 99
+    },
+    {
+      "id": "NX_11",
+      "re": 0.8885934010793615,
+      "coalition_strength": 0.11580709532218865,
+      "diversity_slope": -0.0011717032056155281,
+      "n_tokens": 132
+    },
+    {
+      "id": "NX_12",
+      "re": 0.8993114784019346,
+      "coalition_strength": 0.10327139760438002,
+      "diversity_slope": -0.000997684463697584,
+      "n_tokens": 135
+    },
+    {
+      "id": "NX_13",
+      "re": 0.8977010048269437,
+      "coalition_strength": 0.1038742988064611,
+      "diversity_slope": -0.0010901433170166263,
+      "n_tokens": 123
+    },
+    {
+      "id": "NX_14",
+      "re": 0.8767811438819691,
+      "coalition_strength": 0.12579643662037562,
+      "diversity_slope": -0.0013118414127896746,
+      "n_tokens": 109
+    }
+  ],
+  "re_vs_token_count": {
+    "rho": 0.571749501749806,
+    "p": 0.03266723070059648,
+    "n": 14
+  }
+}

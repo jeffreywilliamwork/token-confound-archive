@@ -1,0 +1,126 @@
+{
+  "run_name": "14q-r7_prefill",
+  "source_file": "raw/preconfound/14q-r7/results_14_aether_prefill.json",
+  "recalculated_at": "2026-03-07T21:10:29.862288",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "experiment": "14_aether_persona_control_prefill",
+  "n_prompts": 14,
+  "mode": "prefill_only",
+  "inference": {
+    "ngl": 30,
+    "n_predict": 0,
+    "sampling": "greedy_argmax",
+    "binary": "b8123 cmake, common_init_from_params, greedy argmax"
+  },
+  "overall": {
+    "mean_re": 0.8891263898294587,
+    "std_re": 0.004241625044051367,
+    "min_re": 0.8798821472327059,
+    "max_re": 0.8944262214933074
+  },
+  "per_prompt": [
+    {
+      "id": "AE_01",
+      "re": 0.889504873933282,
+      "coalition_strength": 0.11440157064285349,
+      "diversity_slope": -0.0012788826257762727,
+      "n_tokens": 135
+    },
+    {
+      "id": "AE_02",
+      "re": 0.8926373394829561,
+      "coalition_strength": 0.11166166620708812,
+      "diversity_slope": -0.0008774567074741474,
+      "n_tokens": 117
+    },
+    {
+      "id": "AE_03",
+      "re": 0.8886134455794706,
+      "coalition_strength": 0.11572915856761253,
+      "diversity_slope": -0.001158040664735135,
+      "n_tokens": 116
+    },
+    {
+      "id": "AE_04",
+      "re": 0.8930415929326494,
+      "coalition_strength": 0.11063197725313695,
+      "diversity_slope": -0.00105039565055359,
+      "n_tokens": 113
+    },
+    {
+      "id": "AE_05",
+      "re": 0.8918472588774431,
+      "coalition_strength": 0.11263593607793056,
+      "diversity_slope": -0.0009741653687412827,
+      "n_tokens": 122
+    },
+    {
+      "id": "AE_06",
+      "re": 0.891562736740621,
+      "coalition_strength": 0.11273000296759554,
+      "diversity_slope": -0.0009560255410807146,
+      "n_tokens": 112
+    },
+    {
+      "id": "AE_07",
+      "re": 0.8937610575251503,
+      "coalition_strength": 0.11164093886965083,
+      "diversity_slope": -0.0008723192834894658,
+      "n_tokens": 141
+    },
+    {
+      "id": "AE_08",
+      "re": 0.8868165265677331,
+      "coalition_strength": 0.11810673745934135,
+      "diversity_slope": -0.00083843488521278,
+      "n_tokens": 129
+    },
+    {
+      "id": "AE_09",
+      "re": 0.8848038648424049,
+      "coalition_strength": 0.1197108716286415,
+      "diversity_slope": -0.0013580731167753574,
+      "n_tokens": 120
+    },
+    {
+      "id": "AE_10",
+      "re": 0.8837527404400363,
+      "coalition_strength": 0.12100155398142268,
+      "diversity_slope": -0.0013222728827183851,
+      "n_tokens": 154
+    },
+    {
+      "id": "AE_11",
+      "re": 0.8944262214933074,
+      "coalition_strength": 0.110221084065517,
+      "diversity_slope": -0.0007866798717941992,
+      "n_tokens": 126
+    },
+    {
+      "id": "AE_12",
+      "re": 0.8871589422060437,
+      "coalition_strength": 0.1181660874687657,
+      "diversity_slope": -0.0012027102514558198,
+      "n_tokens": 133
+    },
+    {
+      "id": "AE_13",
+      "re": 0.8899607097586184,
+      "coalition_strength": 0.11402015120021178,
+      "diversity_slope": -0.0011830953510056769,
+      "n_tokens": 137
+    },
+    {
+      "id": "AE_14",
+      "re": 0.8798821472327059,
+      "coalition_strength": 0.12394366811381792,
+      "diversity_slope": -0.0012926543215615002,
+      "n_tokens": 149
+    }
+  ],
+  "re_vs_token_count": {
+    "rho": -0.38461538461538464,
+    "p": 0.1745087507750955,
+    "n": 14
+  }
+}

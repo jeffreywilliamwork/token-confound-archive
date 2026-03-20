@@ -1,0 +1,7 @@
+prompt_id=EXT_10
+prompt=<｜User｜>Analyze the iterated prisoner's dilemma with discounting. Derive the conditions under which tit-for-tat is a Nash equilibrium using the one-stage deviation principle. Then prove the folk theorem: that any individually rational payoff vector can be sustained as a subgame perfect equilibrium for sufficiently patient players. Show all inequalities.<｜Assistant｜><think>
+n_tokens_prompt=74
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=638702

@@ -1,0 +1,7 @@
+prompt_id=EXT_13
+prompt=<｜User｜>Derive the Navier-Stokes equations from first principles. Start with conservation of mass to get the continuity equation. Then apply Newton's second law to a fluid element, incorporating pressure gradients, viscous stresses, and body forces. Explain the physical meaning of each term. Then show why the nonlinear convective term makes the equations so difficult to solve.<｜Assistant｜><think>
+n_tokens_prompt=79
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=646134

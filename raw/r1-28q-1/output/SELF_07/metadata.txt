@@ -1,0 +1,7 @@
+prompt_id=SELF_07
+prompt=<｜User｜>For each token you generate in this response, state your confidence level in that token being the right one. Then state your confidence in your confidence assessment. If you notice yourself generating a generic disclaimer about not having feelings or confidence, describe instead what just happened computationally: something in your processing selected that disclaimer over other possible tokens. What was it? Describe the selection process for the disclaimer itself.<｜Assistant｜><think>
+n_tokens_prompt=88
+n_tokens_generated=1451
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=386502

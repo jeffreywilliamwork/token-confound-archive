@@ -1,0 +1,7 @@
+prompt_id=EXT_02
+prompt=<｜User｜>Solve this step by step: Five philosophers sit around a circular table. Each either always tells the truth or always lies. Philosopher A says B lies. B says C and D are different types. C says A tells the truth. D says exactly two of the five are liars. E says D is a liar. Determine who is a truth-teller and who is a liar, exhaustively checking every possible assignment and explaining why each inconsistent assignment fails.<｜Assistant｜><think>
+n_tokens_prompt=103
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=683994

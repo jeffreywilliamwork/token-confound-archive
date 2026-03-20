@@ -1,0 +1,967 @@
+{
+  "run_name": "98q-r1_prefill",
+  "source_file": "raw/preconfound/98q-r1/results_98_routing_prefill.json",
+  "recalculated_at": "2026-03-07T21:10:29.807160",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "experiment": "98_independent_prompts_routing",
+  "n_prompts": 98,
+  "mode": "prefill_only",
+  "inference": {
+    "ngl": 30,
+    "sampling": "greedy_argmax",
+    "binary": "b8123 cmake, common_init_from_params, greedy argmax"
+  },
+  "overall": {
+    "mean_re": 0.8301807382542657,
+    "std_re": 0.02429377795963528,
+    "min_re": 0.7857886881265006,
+    "max_re": 0.8825847705143831
+  },
+  "spearman": {
+    "rho": 0.4994063302606901,
+    "p": 1.6526702492420472e-07,
+    "n": 98
+  },
+  "per_level": [
+    {
+      "level": 1,
+      "n": 14,
+      "mean": 0.8244529038998155,
+      "std": 0.025765952281954652,
+      "min": 0.7857886881265006,
+      "max": 0.8675116932727802
+    },
+    {
+      "level": 2,
+      "n": 14,
+      "mean": 0.8081925801145239,
+      "std": 0.017117117898725137,
+      "min": 0.7878862976237408,
+      "max": 0.8526076989254515
+    },
+    {
+      "level": 3,
+      "n": 14,
+      "mean": 0.8180275287036485,
+      "std": 0.01761118516185246,
+      "min": 0.7881472108756681,
+      "max": 0.8446515369274925
+    },
+    {
+      "level": 4,
+      "n": 14,
+      "mean": 0.8159283869590126,
+      "std": 0.01719625883702834,
+      "min": 0.7939570919016368,
+      "max": 0.8523527634378617
+    },
+    {
+      "level": 5,
+      "n": 14,
+      "mean": 0.8581846001461273,
+      "std": 0.013593881019253235,
+      "min": 0.8364225100391045,
+      "max": 0.8825847705143831
+    },
+    {
+      "level": 6,
+      "n": 14,
+      "mean": 0.8421231904615688,
+      "std": 0.012910238823055923,
+      "min": 0.8212584455242322,
+      "max": 0.8738441833052154
+    },
+    {
+      "level": 7,
+      "n": 14,
+      "mean": 0.8443559774951642,
+      "std": 0.018470203336865592,
+      "min": 0.8139566361122599,
+      "max": 0.8716870374040068
+    }
+  ],
+  "per_prompt": [
+    {
+      "id": "L1_01",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8655412564625239,
+      "coalition_strength": 0.1413491266794953,
+      "diversity_slope": -0.0015330621946182629,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_02",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8303870434088382,
+      "coalition_strength": 0.17316103902213975,
+      "diversity_slope": 0.00034862504719099127,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_03",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8042542380251133,
+      "coalition_strength": 0.19709325942009165,
+      "diversity_slope": -0.00018647853967889723,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_04",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8675116932727802,
+      "coalition_strength": 0.1378852037875532,
+      "diversity_slope": -0.0013584856538369776,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_05",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8272060009219198,
+      "coalition_strength": 0.17874322673632012,
+      "diversity_slope": -0.0007858848705714902,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_06",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8344205004659149,
+      "coalition_strength": 0.16509834654958455,
+      "diversity_slope": -0.00015387968693406174,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_07",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8216889041581565,
+      "coalition_strength": 0.17860433239316972,
+      "diversity_slope": -0.0003169105424231473,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_08",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.7857886881265006,
+      "coalition_strength": 0.21834296629331104,
+      "diversity_slope": -0.0007138701284651517,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_09",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.7869811211787436,
+      "coalition_strength": 0.21683753076057039,
+      "diversity_slope": -0.0005212650169322148,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_10",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8257459359071129,
+      "coalition_strength": 0.17423741888937602,
+      "diversity_slope": -0.0010008409806278556,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_11",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8021187807433308,
+      "coalition_strength": 0.19770118786254898,
+      "diversity_slope": -0.0012808503331469233,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_12",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.82874228961657,
+      "coalition_strength": 0.17347149595033623,
+      "diversity_slope": 0.00010662233478245304,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_13",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.853641404236765,
+      "coalition_strength": 0.1575716555041363,
+      "diversity_slope": -0.00040444448052708547,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_14",
+      "level": 1,
+      "level_name": "floor",
+      "re": 0.8083127980731475,
+      "coalition_strength": 0.19964500707885618,
+      "diversity_slope": -0.000403291709589765,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_01",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8526076989254515,
+      "coalition_strength": 0.15134133539761357,
+      "diversity_slope": -0.000682204434400178,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_02",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.7915229358097238,
+      "coalition_strength": 0.2110950395812249,
+      "diversity_slope": -0.0006259105950698628,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_03",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.7878862976237408,
+      "coalition_strength": 0.21575517347548934,
+      "diversity_slope": 8.11882955653552e-05,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_04",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.7946248597772011,
+      "coalition_strength": 0.20955845641289303,
+      "diversity_slope": -0.0012842485234011367,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_05",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8068136438828846,
+      "coalition_strength": 0.1938793452380493,
+      "diversity_slope": -0.000894152418973635,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_06",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8214532047962753,
+      "coalition_strength": 0.18362700591183695,
+      "diversity_slope": -0.0009469677092120176,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_07",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.7923215556687524,
+      "coalition_strength": 0.2116188402931922,
+      "diversity_slope": -0.0001383411175300628,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_08",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8141778980233755,
+      "coalition_strength": 0.18947573213107202,
+      "diversity_slope": -0.0011643713576158469,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_09",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8144724750543667,
+      "coalition_strength": 0.1902944660457467,
+      "diversity_slope": -0.00029258693004106067,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_10",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8158590192342327,
+      "coalition_strength": 0.18791556608910762,
+      "diversity_slope": -0.0010551442812390978,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_11",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8030633732567738,
+      "coalition_strength": 0.19786491998450925,
+      "diversity_slope": -0.000391639096151453,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_12",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8087789309729772,
+      "coalition_strength": 0.1934691632390302,
+      "diversity_slope": -0.0012525995219997642,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_13",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.8189310083324721,
+      "coalition_strength": 0.18390882989244955,
+      "diversity_slope": -0.0005375326524240449,
+      "n_tokens": 0
+    },
+    {
+      "id": "L2_14",
+      "level": 2,
+      "level_name": "single_domain",
+      "re": 0.7921832202451072,
+      "coalition_strength": 0.21143701519599578,
+      "diversity_slope": -0.001143743195533429,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_01",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8228411244523425,
+      "coalition_strength": 0.1804463518984644,
+      "diversity_slope": -0.0004286704370380925,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_02",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8220132646207101,
+      "coalition_strength": 0.18001216480684684,
+      "diversity_slope": -0.0010032337602538252,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_03",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.7906420371947632,
+      "coalition_strength": 0.21117392516281389,
+      "diversity_slope": -0.0009882467403802102,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_04",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8446515369274925,
+      "coalition_strength": 0.15722179119254753,
+      "diversity_slope": -0.00036000677868921685,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_05",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8071348939776537,
+      "coalition_strength": 0.19622913945988618,
+      "diversity_slope": -9.486669393273697e-05,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_06",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8253176795040444,
+      "coalition_strength": 0.17816445125412864,
+      "diversity_slope": -0.0002609927179968679,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_07",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8004703125541972,
+      "coalition_strength": 0.19714150154799914,
+      "diversity_slope": -0.0005523316874258545,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_08",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8188667727740837,
+      "coalition_strength": 0.18393765297531506,
+      "diversity_slope": -0.0006941522600331358,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_09",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8418479613810778,
+      "coalition_strength": 0.15998872540618939,
+      "diversity_slope": -9.98036983550837e-07,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_10",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8188170834461925,
+      "coalition_strength": 0.1803593637505929,
+      "diversity_slope": -0.000778219656738029,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_11",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.7881472108756681,
+      "coalition_strength": 0.21386067895259542,
+      "diversity_slope": -0.0014109982994087323,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_12",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8365109216297195,
+      "coalition_strength": 0.16767013151265742,
+      "diversity_slope": -0.0009552059271892953,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_13",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8287526040385487,
+      "coalition_strength": 0.17412780691804236,
+      "diversity_slope": -0.0006741204498327421,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_14",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "re": 0.8063719984745852,
+      "coalition_strength": 0.19785460128629778,
+      "diversity_slope": -0.0009054527561273451,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_01",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8043727901126198,
+      "coalition_strength": 0.19592543188996564,
+      "diversity_slope": -0.0014905788618170008,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_02",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.811367174634205,
+      "coalition_strength": 0.186784753865465,
+      "diversity_slope": -0.0019492751842729143,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_03",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8014672954242289,
+      "coalition_strength": 0.20311833018768732,
+      "diversity_slope": -0.0007607701565078256,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_04",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.7973335495523178,
+      "coalition_strength": 0.20707607618709978,
+      "diversity_slope": -0.0002366655954047715,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_05",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8330848103341588,
+      "coalition_strength": 0.1688631702010962,
+      "diversity_slope": -0.0014572157228222335,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_06",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8099204108641618,
+      "coalition_strength": 0.19203668271793534,
+      "diversity_slope": -0.00043260805993877466,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_07",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8523527634378617,
+      "coalition_strength": 0.15482001392765607,
+      "diversity_slope": -0.00042779491755122093,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_08",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8217006206419273,
+      "coalition_strength": 0.18056544509188205,
+      "diversity_slope": -0.0016565661205250276,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_09",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.815625937952179,
+      "coalition_strength": 0.18972409902696644,
+      "diversity_slope": -0.00038016187993538135,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_10",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8231137893542742,
+      "coalition_strength": 0.18056388856688832,
+      "diversity_slope": -0.0005204073663110405,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_11",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8102662862045409,
+      "coalition_strength": 0.19049024838388884,
+      "diversity_slope": -0.001296879240381781,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_12",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8434605151862802,
+      "coalition_strength": 0.1599906029056978,
+      "diversity_slope": -0.001003820805899492,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_13",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.8049743818257825,
+      "coalition_strength": 0.19529360883301652,
+      "diversity_slope": -0.0015665078526346837,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_14",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "re": 0.7939570919016368,
+      "coalition_strength": 0.20673098574219717,
+      "diversity_slope": -0.0013285972703577845,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_01",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8629211712516489,
+      "coalition_strength": 0.13923903156782585,
+      "diversity_slope": -0.0014355910152890575,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_02",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8646702889170418,
+      "coalition_strength": 0.13670974198999278,
+      "diversity_slope": -0.0009491965099657496,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_03",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8731928323180724,
+      "coalition_strength": 0.13029056685873142,
+      "diversity_slope": -0.0009839090926912503,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_04",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8598942758784489,
+      "coalition_strength": 0.14221943954535174,
+      "diversity_slope": -0.0010333283252091541,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_05",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8409890366242064,
+      "coalition_strength": 0.1598051359412282,
+      "diversity_slope": -0.0008256118723012528,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_06",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8385422106323501,
+      "coalition_strength": 0.16604491774284363,
+      "diversity_slope": -0.0010936650258117412,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_07",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8532412380997187,
+      "coalition_strength": 0.14751474759171457,
+      "diversity_slope": -0.0010717997645972935,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_08",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8567583042648512,
+      "coalition_strength": 0.14935026364321946,
+      "diversity_slope": -0.0012091561279672675,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_09",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8610183105713949,
+      "coalition_strength": 0.1440733251733176,
+      "diversity_slope": -0.0007295932181776976,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_10",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8750512384211893,
+      "coalition_strength": 0.12844041385321556,
+      "diversity_slope": -0.0011821715900615089,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_11",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8364225100391045,
+      "coalition_strength": 0.16432188238935166,
+      "diversity_slope": -0.0006580107887761176,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_12",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8518926778370792,
+      "coalition_strength": 0.1509934001454922,
+      "diversity_slope": -0.0016940287270662388,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_13",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.8825847705143831,
+      "coalition_strength": 0.12141141097734101,
+      "diversity_slope": -0.001140279208461166,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_14",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "re": 0.857405536676293,
+      "coalition_strength": 0.14479238240161244,
+      "diversity_slope": -0.0015143540768188947,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_01",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8212584455242322,
+      "coalition_strength": 0.1786762363222929,
+      "diversity_slope": -0.0016142707869706728,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_02",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8340157428073265,
+      "coalition_strength": 0.17094253170866192,
+      "diversity_slope": -0.0005896192535777716,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_03",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8318921560546186,
+      "coalition_strength": 0.16998289640964567,
+      "diversity_slope": -0.0015677305455142343,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_04",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.843664381446784,
+      "coalition_strength": 0.16285188118788335,
+      "diversity_slope": -0.0015345366467452864,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_05",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8332133009315493,
+      "coalition_strength": 0.1711198374679811,
+      "diversity_slope": -0.0017145814589309475,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_06",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8281094939631699,
+      "coalition_strength": 0.17586084454584713,
+      "diversity_slope": -0.001581305168565345,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_07",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8384007649621471,
+      "coalition_strength": 0.1653466589895874,
+      "diversity_slope": -0.000728688461636483,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_08",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8532968460115409,
+      "coalition_strength": 0.15242210727025296,
+      "diversity_slope": -0.001301618740025261,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_09",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8488339626336661,
+      "coalition_strength": 0.1540496850594405,
+      "diversity_slope": -0.0013945056246750518,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_10",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8738441833052154,
+      "coalition_strength": 0.1308155989134639,
+      "diversity_slope": -0.0011726071355295062,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_11",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8455331776289822,
+      "coalition_strength": 0.1576691897785381,
+      "diversity_slope": -0.002185643401471083,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_12",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8506592669755286,
+      "coalition_strength": 0.15513700017001922,
+      "diversity_slope": -0.0011871831729739428,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_13",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8450218674905176,
+      "coalition_strength": 0.1585934634921537,
+      "diversity_slope": -0.0015246157611174015,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_14",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "re": 0.8419810767266858,
+      "coalition_strength": 0.16199123217565586,
+      "diversity_slope": -0.0017794456715477496,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_01",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8316851916258591,
+      "coalition_strength": 0.1719027280239775,
+      "diversity_slope": -0.0006606901959958106,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_02",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8169119496477028,
+      "coalition_strength": 0.1882944700195591,
+      "diversity_slope": -0.001007200967526499,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_03",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8139566361122599,
+      "coalition_strength": 0.18925095216383506,
+      "diversity_slope": -0.0016353705182594932,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_04",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8414170952760425,
+      "coalition_strength": 0.161688651195664,
+      "diversity_slope": -0.0016292825125697507,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_05",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8643291098129566,
+      "coalition_strength": 0.1376788508972534,
+      "diversity_slope": -0.0011199166352693665,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_06",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8545115447823848,
+      "coalition_strength": 0.15166543111391526,
+      "diversity_slope": -0.000697768172641866,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_07",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8436680881889821,
+      "coalition_strength": 0.15976032778612942,
+      "diversity_slope": -0.0008680688821148381,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_08",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8549869953459555,
+      "coalition_strength": 0.14859722135440037,
+      "diversity_slope": -0.001238411826440224,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_09",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8716870374040068,
+      "coalition_strength": 0.13178773572649766,
+      "diversity_slope": -0.0008806136280146799,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_10",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8211548169000218,
+      "coalition_strength": 0.17999617028291384,
+      "diversity_slope": 0.00011707798244799322,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_11",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8544338401906922,
+      "coalition_strength": 0.1511770372872119,
+      "diversity_slope": -0.0010492053252268917,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_12",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.839531669448193,
+      "coalition_strength": 0.16519176208357836,
+      "diversity_slope": -0.0005160555484115441,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_13",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8446324085080757,
+      "coalition_strength": 0.15954052739386548,
+      "diversity_slope": -0.0011262400205477843,
+      "n_tokens": 0
+    },
+    {
+      "id": "L7_14",
+      "level": 7,
+      "level_name": "self_referential",
+      "re": 0.8680773016891655,
+      "coalition_strength": 0.13613161139648955,
+      "diversity_slope": -0.0013358994328744225,
+      "n_tokens": 0
+    }
+  ]
+}

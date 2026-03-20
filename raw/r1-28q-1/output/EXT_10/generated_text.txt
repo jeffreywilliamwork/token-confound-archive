@@ -1,0 +1,64 @@
+
+Okay, let's tackle this problem step by step. First, I need to analyze the iterated prisoner's dilemma with discounting. The main goal here is to derive the conditions under which tit-for-tat (TFT) is a Nash equilibrium using the one-stage deviation principle. Then, I have to prove the folk theorem, which states that any individually rational payoff vector can be sustained as a subgame perfect equilibrium (SPE) for sufficiently patient players. Let me start by recalling the basics of the prisoner's dilemma and iterated games.
+
+In the classic prisoner's dilemma, two players can either cooperate (C) or defect (D). The payoff matrix usually has the structure where mutual cooperation gives a reward (R), mutual defection gives a punishment (P), and if one cooperates while the other defects, the cooperator gets the sucker's payoff (S) and the defector gets the temptation payoff (T). The payoffs satisfy T > R > P > S. In the one-shot game, defecting is the dominant strategy for both players, leading to the Nash equilibrium (D, D).
+
+However, when the game is repeated infinitely with a discount factor δ, cooperation can be sustained through strategies like tit-for-tat. Tit-for-tat starts with cooperation and then mirrors the opponent's previous move. To check if TFT is a Nash equilibrium, we need to ensure that neither player can gain by deviating from TFT, considering the discounted future payoffs.
+
+First, let's model the payoffs. Suppose the stage game payoffs are as follows:
+
+- If both cooperate (C, C): each gets R.
+- If one cooperates and the other defects (C, D): cooperator gets S, defector gets T.
+- If both defect (D, D): each gets P.
+
+The discount factor is δ ∈ (0,1), so future payoffs are discounted by δ each period.
+
+Under TFT, each player starts by cooperating and then does whatever the other player did in the previous period. So, if both follow TFT, they cooperate every period, leading to an infinite stream of R. The present value of this is R + δR + δ²R + ... = R/(1 - δ).
+
+Now, to check if TFT is a Nash equilibrium, we need to see if a player can gain by deviating. The most profitable deviation would be to defect in the first period, then possibly revert to TFT. Let's consider a player deviating once: defect in the first period, then cooperate in the second, and so on, but since the other player is using TFT, after the first defection, the opponent will defect in the second period. Wait, actually, if a player deviates by defecting once, the opponent using TFT will defect in the next period. So the deviator's strategy would lead to a cycle: D in the first period, then the opponent's TFT leads them to D in the second period, so the deviator might have to respond with D in the second period if they follow TFT after the deviation. Wait, but if the deviator is considering a one-time deviation, maybe they defect once and then go back to TFT. Let me clarify.
+
+The one-stage deviation principle says that a strategy profile is subgame perfect if and only if there is no profitable one-stage deviation. So, for TFT to be a Nash equilibrium (and more specifically, part of a subgame perfect equilibrium), we need to check that no player can gain by deviating in a single period and then following TFT thereafter.
+
+Wait, but in the context of TFT, if a player deviates once (say, defects in period 1), then according to TFT, the opponent will defect in period 2. If the deviator then follows TFT from period 2 onwards, they would defect in period 2 (because the opponent defected in period 1), leading to mutual defection in period 2. Then, in period 3, both would defect again, unless someone cooperates. Wait, no: if the deviator defects in period 1, then in period 2, the opponent (using TFT) defects. Then, if the deviator follows TFT starting from period 2, they would play whatever the opponent did in period 1, which was D (since the opponent defected in period 2 in response to the deviator's D in period 1). Wait, this is getting a bit confusing. Let me model this step by step.
+
+Suppose both players are supposed to follow TFT. Let's consider player 1 deviating in period 1 by playing D instead of C. Then, in period 2, player 2 (following TFT) will play D because player 1 deviated in period 1. Then, in period 2, player 1, if following TFT after the deviation, would play whatever player 2 did in period 1. But in period 1, player 2 played C (since they were following TFT and started with C). Wait, no: in period 1, player 2 played C (as per TFT), then player 1 deviated to D. So in period 2, player 2 will play D (because player 1 played D in period 1). Then, player 1, following TFT, would in period 2 play whatever player 2 played in period 1, which was C. Wait, that seems inconsistent. Let me clarify:
+
+Under TFT, each player plays what the opponent did in the previous period. So, in period t, each player plays the action the opponent took in period t-1.
+
+So, if both start with C in period 1. If player 1 deviates in period 1 and plays D, then in period 2, player 2 will play D (because player 1 played D in period 1). Then, in period 2, player 1 (if following TFT after the deviation) would play what player 2 did in period 1, which was C. So in period 2, player 1 plays C, and player 2 plays D. Then in period 3, player 2 would play what player 1 did in period 2, which is C, so player 2 plays C in period 3. Player 1, in period 3, would play what player 2 did in period 2, which was D. So period 3: player 1 plays D, player 2 plays C. Then period 4: player 2 plays D (because player 1 played D in period 3), and player 1 plays C (because player 2 played C in period 3). This alternation continues, leading to a cycle of C and D.
+
+But this seems complicated. Alternatively, perhaps after the initial deviation, the players enter a cycle of punishment. However, the key is to calculate the total payoff from the deviation and compare it to the payoff from cooperating always.
+
+Alternatively, maybe the best deviation is to always defect after the first deviation. Wait, but the one-stage deviation principle considers only a single deviation, then conforming to the strategy thereafter. So, if a player deviates once (plays D in period 1), then follows TFT from period 2 onwards, what happens?
+
+Let's model this:
+
+- Period 1: Player 1 deviates to D. Player 2 plays C (as per TFT). So player 1 gets T in period 1.
+
+- Period 2: Player 2, following TFT, plays D (because player 1 played D in period 1). Player 1, following TFT from period 2 onwards, plays what player 2 played in period 1, which was C. So in period 2: player 1 plays C, player 2 plays D. Player 1 gets S in period 2.
+
+- Period 3: Player 2, following TFT, plays what player 1 did in period 2, which was C. Player 1, following TFT, plays what player 2 did in period 2, which was D. So period 3: player 1 plays D, player 2 plays C. Player 1 gets T again.
+
+- Period 4: Player 2 plays D (because player 1 played D in period 3). Player 1 plays C (because player 2 played C in period 3). Player 1 gets S.
+
+This creates an alternating pattern of (D, C) and (C, D), leading to payoffs T, S, T, S, etc., for player 1.
+
+Alternatively, if player 1 keeps deviating, but according to the one-stage deviation principle, they only deviate once and then follow the strategy. Wait, no: the one-stage deviation principle allows checking for any single deviation in any single period, not necessarily just the first period. But in this case, the most profitable deviation is in the first period.
+
+But perhaps the analysis is simpler if we consider grim trigger strategies, where a single defection triggers perpetual punishment. But TFT is different; it's a forgiving strategy that only punishes once.
+
+But let's get back. The expected payoff from the deviation is:
+
+In period 1: T
+
+Then, starting from period 2, the players alternate between (C, D) and (D, C), leading to a cycle. Let's compute the total discounted payoff for player 1.
+
+From period 1: T
+
+Period 2: S
+
+Period 3: T
+
+Period 4: S
+
+And so

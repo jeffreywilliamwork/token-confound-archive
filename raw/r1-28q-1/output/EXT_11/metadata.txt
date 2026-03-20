@@ -1,0 +1,7 @@
+prompt_id=EXT_11
+prompt=<｜User｜>Describe the complete process of eukaryotic mRNA processing from initial transcription to translation-ready mRNA. Cover 5' capping with 7-methylguanosine, splicing by the spliceosome including the two transesterification reactions, 3' cleavage and polyadenylation, and nuclear export via the NPC. Explain the molecular machinery at each step.<｜Assistant｜><think>
+n_tokens_prompt=77
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=644654

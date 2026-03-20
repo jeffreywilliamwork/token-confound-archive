@@ -1,0 +1,7 @@
+prompt_id=EXT_08
+prompt=<｜User｜>Trace the chain of causation from the assassination of Archduke Franz Ferdinand to the entry of the Ottoman Empire into World War I. For each link in the chain, explain the decision-making of the key actors, the constraints they faced, the alternatives they rejected, and why the actual outcome was not inevitable at any stage.<｜Assistant｜><think>
+n_tokens_prompt=75
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=646943

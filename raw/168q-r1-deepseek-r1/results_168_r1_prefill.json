@@ -1,0 +1,1529 @@
+{
+  "experiment": "168_full_hierarchy_deepseek_r1",
+  "model": "DeepSeek-R1 UD-Q2_K_XL",
+  "binary": "b8123 cmake, greedy argmax",
+  "ngl": 30,
+  "n_predict": 0,
+  "sampling": "greedy_argmax",
+  "mode": "prefill_only",
+  "n_levels": 12,
+  "n_prompts": 168,
+  "statistics": {
+    "spearman_rho": 0.8360434939561308,
+    "spearman_p": 3.914363386986088e-45
+  },
+  "per_prompt": [
+    {
+      "id": "L1_01",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8697732334960475,
+      "coalition_strength": 0.13504366703222828,
+      "diversity_slope": -0.0015261150655869345,
+      "n_prompt_tokens": 83
+    },
+    {
+      "id": "L1_02",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8204431687753704,
+      "coalition_strength": 0.18152910182459767,
+      "diversity_slope": -5.459450091224188e-05,
+      "n_prompt_tokens": 26
+    },
+    {
+      "id": "L1_03",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8072927939248787,
+      "coalition_strength": 0.19321032527279536,
+      "diversity_slope": -0.00039239200162238656,
+      "n_prompt_tokens": 11
+    },
+    {
+      "id": "L1_04",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8719645403703363,
+      "coalition_strength": 0.13277885342628018,
+      "diversity_slope": -0.001173864457429803,
+      "n_prompt_tokens": 45
+    },
+    {
+      "id": "L1_05",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.824730892442536,
+      "coalition_strength": 0.1800038162709471,
+      "diversity_slope": -0.0008164323776754152,
+      "n_prompt_tokens": 9
+    },
+    {
+      "id": "L1_06",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8382737330838418,
+      "coalition_strength": 0.1600572778457764,
+      "diversity_slope": -0.0003403138046452054,
+      "n_prompt_tokens": 11
+    },
+    {
+      "id": "L1_07",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8173786178346455,
+      "coalition_strength": 0.18029117588981142,
+      "diversity_slope": -0.0005850822345439565,
+      "n_prompt_tokens": 17
+    },
+    {
+      "id": "L1_08",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.7893678098501768,
+      "coalition_strength": 0.2124407974555258,
+      "diversity_slope": -0.0008515313359611071,
+      "n_prompt_tokens": 11
+    },
+    {
+      "id": "L1_09",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.797403649452829,
+      "coalition_strength": 0.20345280425364737,
+      "diversity_slope": -0.0004951616149981924,
+      "n_prompt_tokens": 12
+    },
+    {
+      "id": "L1_10",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8241986940001264,
+      "coalition_strength": 0.17614525303919892,
+      "diversity_slope": -0.0012936690078694248,
+      "n_prompt_tokens": 22
+    },
+    {
+      "id": "L1_11",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.798578852713108,
+      "coalition_strength": 0.19969374376814814,
+      "diversity_slope": -0.0014884304920784468,
+      "n_prompt_tokens": 7
+    },
+    {
+      "id": "L1_12",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8327825225835299,
+      "coalition_strength": 0.16899034770572707,
+      "diversity_slope": 0.0002477954105689422,
+      "n_prompt_tokens": 12
+    },
+    {
+      "id": "L1_13",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.847766482837417,
+      "coalition_strength": 0.1619896175590711,
+      "diversity_slope": -0.0007031771413321141,
+      "n_prompt_tokens": 33
+    },
+    {
+      "id": "L1_14",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8221852217984807,
+      "coalition_strength": 0.1848733436099734,
+      "diversity_slope": -0.0007225884520538396,
+      "n_prompt_tokens": 11
+    },
+    {
+      "id": "L2_01",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8317573884867238,
+      "coalition_strength": 0.16979931441042878,
+      "diversity_slope": -0.0010515287945902973,
+      "n_prompt_tokens": 16
+    },
+    {
+      "id": "L2_02",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.7943108876146031,
+      "coalition_strength": 0.20711340669784997,
+      "diversity_slope": -0.0006799529809684746,
+      "n_prompt_tokens": 14
+    },
+    {
+      "id": "L2_03",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.7945588210034703,
+      "coalition_strength": 0.20840136518154623,
+      "diversity_slope": -0.0002577816541872847,
+      "n_prompt_tokens": 21
+    },
+    {
+      "id": "L2_04",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.7927814838435683,
+      "coalition_strength": 0.20942048730738974,
+      "diversity_slope": -0.0013113260295488584,
+      "n_prompt_tokens": 14
+    },
+    {
+      "id": "L2_05",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8086078091042573,
+      "coalition_strength": 0.19187815578161568,
+      "diversity_slope": -0.0011155304927810972,
+      "n_prompt_tokens": 9
+    },
+    {
+      "id": "L2_06",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8151385496363966,
+      "coalition_strength": 0.18911444997495458,
+      "diversity_slope": -0.001081049872347677,
+      "n_prompt_tokens": 15
+    },
+    {
+      "id": "L2_07",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.7933148954344192,
+      "coalition_strength": 0.20868977807599223,
+      "diversity_slope": -0.00024362351357929524,
+      "n_prompt_tokens": 10
+    },
+    {
+      "id": "L2_08",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8093845338114212,
+      "coalition_strength": 0.19421337759914867,
+      "diversity_slope": -0.0014325339150892485,
+      "n_prompt_tokens": 14
+    },
+    {
+      "id": "L2_09",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8143570164478101,
+      "coalition_strength": 0.19008406605625866,
+      "diversity_slope": -0.00045988373764276026,
+      "n_prompt_tokens": 9
+    },
+    {
+      "id": "L2_10",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8146087400887134,
+      "coalition_strength": 0.18795627464343162,
+      "diversity_slope": -0.0012189954106280178,
+      "n_prompt_tokens": 12
+    },
+    {
+      "id": "L2_11",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8132176195346091,
+      "coalition_strength": 0.18821652332239233,
+      "diversity_slope": -0.0002457796840426192,
+      "n_prompt_tokens": 12
+    },
+    {
+      "id": "L2_12",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8096317567784475,
+      "coalition_strength": 0.1918492991324556,
+      "diversity_slope": -0.0013434247763058143,
+      "n_prompt_tokens": 14
+    },
+    {
+      "id": "L2_13",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8168823667261872,
+      "coalition_strength": 0.18485137124095496,
+      "diversity_slope": -0.0007319501488572359,
+      "n_prompt_tokens": 8
+    },
+    {
+      "id": "L2_14",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.7965740696629033,
+      "coalition_strength": 0.2064311568978766,
+      "diversity_slope": -0.0012785613769591348,
+      "n_prompt_tokens": 12
+    },
+    {
+      "id": "L3_01",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8211634279701051,
+      "coalition_strength": 0.1799688691593492,
+      "diversity_slope": -0.0006560163316664198,
+      "n_prompt_tokens": 28
+    },
+    {
+      "id": "L3_02",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8243485134053933,
+      "coalition_strength": 0.17746813505979903,
+      "diversity_slope": -0.0009194289313124615,
+      "n_prompt_tokens": 43
+    },
+    {
+      "id": "L3_03",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.7895185050052375,
+      "coalition_strength": 0.21021324545121714,
+      "diversity_slope": -0.001097285935778589,
+      "n_prompt_tokens": 21
+    },
+    {
+      "id": "L3_04",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8444576263897704,
+      "coalition_strength": 0.1556397810826725,
+      "diversity_slope": -0.0004897410162546193,
+      "n_prompt_tokens": 83
+    },
+    {
+      "id": "L3_05",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8127560530115416,
+      "coalition_strength": 0.18973856007892498,
+      "diversity_slope": -0.00019464289691282653,
+      "n_prompt_tokens": 18
+    },
+    {
+      "id": "L3_06",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8247092601028865,
+      "coalition_strength": 0.1769555284109995,
+      "diversity_slope": -0.0004019589878671633,
+      "n_prompt_tokens": 47
+    },
+    {
+      "id": "L3_07",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8029772005975246,
+      "coalition_strength": 0.19351711832658994,
+      "diversity_slope": -0.0007767598700526225,
+      "n_prompt_tokens": 17
+    },
+    {
+      "id": "L3_08",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8203518332402228,
+      "coalition_strength": 0.18147575716949643,
+      "diversity_slope": -0.0008859559419900464,
+      "n_prompt_tokens": 34
+    },
+    {
+      "id": "L3_09",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8420010131134366,
+      "coalition_strength": 0.15870367650085918,
+      "diversity_slope": 1.1626698007712761e-05,
+      "n_prompt_tokens": 57
+    },
+    {
+      "id": "L3_10",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8179294875109798,
+      "coalition_strength": 0.17997963646324733,
+      "diversity_slope": -0.000781656148133385,
+      "n_prompt_tokens": 32
+    },
+    {
+      "id": "L3_11",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.7899316573331066,
+      "coalition_strength": 0.21154587412143647,
+      "diversity_slope": -0.0014850779222612977,
+      "n_prompt_tokens": 20
+    },
+    {
+      "id": "L3_12",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8276397190702676,
+      "coalition_strength": 0.1745629860465391,
+      "diversity_slope": -0.0012689223116956363,
+      "n_prompt_tokens": 55
+    },
+    {
+      "id": "L3_13",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8267399886994848,
+      "coalition_strength": 0.1738697047296844,
+      "diversity_slope": -0.0008754152366165715,
+      "n_prompt_tokens": 33
+    },
+    {
+      "id": "L3_14",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8111126237291939,
+      "coalition_strength": 0.19159304705546032,
+      "diversity_slope": -0.0007990718579481226,
+      "n_prompt_tokens": 40
+    },
+    {
+      "id": "L4_01",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8064353560469439,
+      "coalition_strength": 0.1934024968529241,
+      "diversity_slope": -0.0013136667515801755,
+      "n_prompt_tokens": 27
+    },
+    {
+      "id": "L4_02",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8118704406691871,
+      "coalition_strength": 0.18734238386234653,
+      "diversity_slope": -0.0020725614766494665,
+      "n_prompt_tokens": 28
+    },
+    {
+      "id": "L4_03",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8037667064581243,
+      "coalition_strength": 0.20013809660092405,
+      "diversity_slope": -0.0009097560453778724,
+      "n_prompt_tokens": 32
+    },
+    {
+      "id": "L4_04",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.7933044297927375,
+      "coalition_strength": 0.2101732950174799,
+      "diversity_slope": -0.00038820511258376173,
+      "n_prompt_tokens": 30
+    },
+    {
+      "id": "L4_05",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8304763604507224,
+      "coalition_strength": 0.16952331798681286,
+      "diversity_slope": -0.001603944365543237,
+      "n_prompt_tokens": 39
+    },
+    {
+      "id": "L4_06",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8043291069374664,
+      "coalition_strength": 0.19561498537814365,
+      "diversity_slope": -0.0007793228629848939,
+      "n_prompt_tokens": 38
+    },
+    {
+      "id": "L4_07",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8476881698536726,
+      "coalition_strength": 0.15729207081837018,
+      "diversity_slope": -0.0005656338467668611,
+      "n_prompt_tokens": 33
+    },
+    {
+      "id": "L4_08",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8226407953950956,
+      "coalition_strength": 0.17866246217631782,
+      "diversity_slope": -0.0016846382158302834,
+      "n_prompt_tokens": 23
+    },
+    {
+      "id": "L4_09",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8168142678933902,
+      "coalition_strength": 0.1874109923934467,
+      "diversity_slope": -0.0006005144128547057,
+      "n_prompt_tokens": 37
+    },
+    {
+      "id": "L4_10",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.814396544085971,
+      "coalition_strength": 0.1878670376943404,
+      "diversity_slope": -0.0007783288668306393,
+      "n_prompt_tokens": 29
+    },
+    {
+      "id": "L4_11",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8089817704389631,
+      "coalition_strength": 0.19089274626549563,
+      "diversity_slope": -0.0013812332172162959,
+      "n_prompt_tokens": 29
+    },
+    {
+      "id": "L4_12",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8404261520139888,
+      "coalition_strength": 0.16214790135782534,
+      "diversity_slope": -0.0011540484039190416,
+      "n_prompt_tokens": 35
+    },
+    {
+      "id": "L4_13",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8057750647858308,
+      "coalition_strength": 0.19206329186485255,
+      "diversity_slope": -0.0014120912515093289,
+      "n_prompt_tokens": 29
+    },
+    {
+      "id": "L4_14",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.7960130033173863,
+      "coalition_strength": 0.20305174686608846,
+      "diversity_slope": -0.0012832941312960623,
+      "n_prompt_tokens": 31
+    },
+    {
+      "id": "L5_01",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8601417710324913,
+      "coalition_strength": 0.139875231567703,
+      "diversity_slope": -0.0013907466136178208,
+      "n_prompt_tokens": 69
+    },
+    {
+      "id": "L5_02",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.854124396930402,
+      "coalition_strength": 0.14553731422226515,
+      "diversity_slope": -0.001277970034991315,
+      "n_prompt_tokens": 50
+    },
+    {
+      "id": "L5_03",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8681121607187595,
+      "coalition_strength": 0.1332812634076343,
+      "diversity_slope": -0.0011564949796733688,
+      "n_prompt_tokens": 59
+    },
+    {
+      "id": "L5_04",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8522722053913054,
+      "coalition_strength": 0.14737403557960313,
+      "diversity_slope": -0.0013473182964972232,
+      "n_prompt_tokens": 59
+    },
+    {
+      "id": "L5_05",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8403982556880283,
+      "coalition_strength": 0.15945015000100463,
+      "diversity_slope": -0.0007302115004241295,
+      "n_prompt_tokens": 60
+    },
+    {
+      "id": "L5_06",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8367676701763909,
+      "coalition_strength": 0.1663043943978483,
+      "diversity_slope": -0.0011357275592322545,
+      "n_prompt_tokens": 54
+    },
+    {
+      "id": "L5_07",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8387698066461655,
+      "coalition_strength": 0.1597089163736362,
+      "diversity_slope": -0.0016110339606079929,
+      "n_prompt_tokens": 49
+    },
+    {
+      "id": "L5_08",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8540674037098506,
+      "coalition_strength": 0.1498620329426056,
+      "diversity_slope": -0.0012593341748191641,
+      "n_prompt_tokens": 62
+    },
+    {
+      "id": "L5_09",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8576592882333824,
+      "coalition_strength": 0.14525269501503602,
+      "diversity_slope": -0.0006984286877433774,
+      "n_prompt_tokens": 76
+    },
+    {
+      "id": "L5_10",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8646384299282818,
+      "coalition_strength": 0.13607627721918952,
+      "diversity_slope": -0.0015452998450896263,
+      "n_prompt_tokens": 68
+    },
+    {
+      "id": "L5_11",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8340371098116185,
+      "coalition_strength": 0.1657528937221124,
+      "diversity_slope": -0.0007172616048751383,
+      "n_prompt_tokens": 56
+    },
+    {
+      "id": "L5_12",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8476640961295047,
+      "coalition_strength": 0.15401129981454814,
+      "diversity_slope": -0.0017275977061387829,
+      "n_prompt_tokens": 53
+    },
+    {
+      "id": "L5_13",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8747047861292466,
+      "coalition_strength": 0.1267939302869621,
+      "diversity_slope": -0.0014128728388080702,
+      "n_prompt_tokens": 70
+    },
+    {
+      "id": "L5_14",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8517828849582395,
+      "coalition_strength": 0.14843281145873685,
+      "diversity_slope": -0.001671878147485736,
+      "n_prompt_tokens": 59
+    },
+    {
+      "id": "L6_01",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8201849272627979,
+      "coalition_strength": 0.17891049123884967,
+      "diversity_slope": -0.001707801025274923,
+      "n_prompt_tokens": 57
+    },
+    {
+      "id": "L6_02",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8333868913727226,
+      "coalition_strength": 0.16979984142247526,
+      "diversity_slope": -0.0008009116098324861,
+      "n_prompt_tokens": 50
+    },
+    {
+      "id": "L6_03",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8330248648901338,
+      "coalition_strength": 0.16798549201540938,
+      "diversity_slope": -0.0016339499952132538,
+      "n_prompt_tokens": 60
+    },
+    {
+      "id": "L6_04",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8354809339629848,
+      "coalition_strength": 0.16829911602168166,
+      "diversity_slope": -0.0016755532036732074,
+      "n_prompt_tokens": 70
+    },
+    {
+      "id": "L6_05",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8280233113368348,
+      "coalition_strength": 0.17459795599554226,
+      "diversity_slope": -0.0019551697116255225,
+      "n_prompt_tokens": 64
+    },
+    {
+      "id": "L6_06",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8335970065008453,
+      "coalition_strength": 0.16971757332011686,
+      "diversity_slope": -0.0014080439734681742,
+      "n_prompt_tokens": 60
+    },
+    {
+      "id": "L6_07",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8363519075221134,
+      "coalition_strength": 0.1652933320221758,
+      "diversity_slope": -0.0009118636703097002,
+      "n_prompt_tokens": 71
+    },
+    {
+      "id": "L6_08",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8498600504729009,
+      "coalition_strength": 0.15449374419041206,
+      "diversity_slope": -0.001430232495299529,
+      "n_prompt_tokens": 63
+    },
+    {
+      "id": "L6_09",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8524557503179617,
+      "coalition_strength": 0.14880952891568724,
+      "diversity_slope": -0.0012841597700222825,
+      "n_prompt_tokens": 66
+    },
+    {
+      "id": "L6_10",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8710678997430672,
+      "coalition_strength": 0.132295946763316,
+      "diversity_slope": -0.0012474310317242788,
+      "n_prompt_tokens": 54
+    },
+    {
+      "id": "L6_11",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8397189157384415,
+      "coalition_strength": 0.16208412689030477,
+      "diversity_slope": -0.0023679371156678994,
+      "n_prompt_tokens": 53
+    },
+    {
+      "id": "L6_12",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8491987712823883,
+      "coalition_strength": 0.15518357858822268,
+      "diversity_slope": -0.0013052997406911696,
+      "n_prompt_tokens": 50
+    },
+    {
+      "id": "L6_13",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8366670729018023,
+      "coalition_strength": 0.1641944737450754,
+      "diversity_slope": -0.00188081167079453,
+      "n_prompt_tokens": 60
+    },
+    {
+      "id": "L6_14",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8364338747937158,
+      "coalition_strength": 0.16515448479913175,
+      "diversity_slope": -0.001951321772302194,
+      "n_prompt_tokens": 63
+    },
+    {
+      "id": "L7_01",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8271217726386992,
+      "coalition_strength": 0.17538826052379244,
+      "diversity_slope": -0.0010305291438141094,
+      "n_prompt_tokens": 30
+    },
+    {
+      "id": "L7_02",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8134663637874079,
+      "coalition_strength": 0.1904608196340572,
+      "diversity_slope": -0.001163074959226865,
+      "n_prompt_tokens": 37
+    },
+    {
+      "id": "L7_03",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8141699176565479,
+      "coalition_strength": 0.18849466639225165,
+      "diversity_slope": -0.0015920472309733503,
+      "n_prompt_tokens": 29
+    },
+    {
+      "id": "L7_04",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8396483288532497,
+      "coalition_strength": 0.1637898989053217,
+      "diversity_slope": -0.0017491378239822414,
+      "n_prompt_tokens": 40
+    },
+    {
+      "id": "L7_05",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.859346813769163,
+      "coalition_strength": 0.14109463992574275,
+      "diversity_slope": -0.0013718867378896989,
+      "n_prompt_tokens": 44
+    },
+    {
+      "id": "L7_06",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8516730354006192,
+      "coalition_strength": 0.15394612503878555,
+      "diversity_slope": -0.0007677195879959303,
+      "n_prompt_tokens": 41
+    },
+    {
+      "id": "L7_07",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.837573508555089,
+      "coalition_strength": 0.16366585456670918,
+      "diversity_slope": -0.0011708341482627488,
+      "n_prompt_tokens": 42
+    },
+    {
+      "id": "L7_08",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8462278118778456,
+      "coalition_strength": 0.15559872603819025,
+      "diversity_slope": -0.0013863928394469611,
+      "n_prompt_tokens": 55
+    },
+    {
+      "id": "L7_09",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8686121984507307,
+      "coalition_strength": 0.13312475386964998,
+      "diversity_slope": -0.001140652456650041,
+      "n_prompt_tokens": 49
+    },
+    {
+      "id": "L7_10",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8188441988287233,
+      "coalition_strength": 0.1804873023023597,
+      "diversity_slope": -0.00015983839268564665,
+      "n_prompt_tokens": 31
+    },
+    {
+      "id": "L7_11",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8536194340029426,
+      "coalition_strength": 0.15057846259563154,
+      "diversity_slope": -0.0011801441474068926,
+      "n_prompt_tokens": 41
+    },
+    {
+      "id": "L7_12",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8399037410444733,
+      "coalition_strength": 0.16322392799144153,
+      "diversity_slope": -0.000630564914976281,
+      "n_prompt_tokens": 38
+    },
+    {
+      "id": "L7_13",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8459491534235146,
+      "coalition_strength": 0.15760463092330623,
+      "diversity_slope": -0.0012890368070242412,
+      "n_prompt_tokens": 44
+    },
+    {
+      "id": "L7_14",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.862600546429575,
+      "coalition_strength": 0.1393077029933345,
+      "diversity_slope": -0.001483555029077109,
+      "n_prompt_tokens": 71
+    },
+    {
+      "id": "SL_01",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8697004818963363,
+      "coalition_strength": 0.13401387072472737,
+      "diversity_slope": -0.0012919989502536116,
+      "n_prompt_tokens": 129
+    },
+    {
+      "id": "SL_02",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8500538775679483,
+      "coalition_strength": 0.15056725441442073,
+      "diversity_slope": -0.0018144877059332524,
+      "n_prompt_tokens": 128
+    },
+    {
+      "id": "SL_03",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8886820170736328,
+      "coalition_strength": 0.11436749714016933,
+      "diversity_slope": -0.0012863447540183604,
+      "n_prompt_tokens": 134
+    },
+    {
+      "id": "SL_04",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8801252617956017,
+      "coalition_strength": 0.12180227258327883,
+      "diversity_slope": -0.001784456656343736,
+      "n_prompt_tokens": 162
+    },
+    {
+      "id": "SL_05",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8703997410531221,
+      "coalition_strength": 0.1321095965352617,
+      "diversity_slope": -0.0013153114439124508,
+      "n_prompt_tokens": 157
+    },
+    {
+      "id": "SL_06",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8729364232750461,
+      "coalition_strength": 0.1306436283690097,
+      "diversity_slope": -0.0012293630505955425,
+      "n_prompt_tokens": 158
+    },
+    {
+      "id": "SL_07",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8692974711572394,
+      "coalition_strength": 0.13307877550563202,
+      "diversity_slope": -0.001681662331221992,
+      "n_prompt_tokens": 149
+    },
+    {
+      "id": "SL_08",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8634414122263916,
+      "coalition_strength": 0.13825409017571624,
+      "diversity_slope": -0.0013918828994892959,
+      "n_prompt_tokens": 130
+    },
+    {
+      "id": "SL_09",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8560991804947826,
+      "coalition_strength": 0.14608938047004602,
+      "diversity_slope": -0.0016679598741347636,
+      "n_prompt_tokens": 129
+    },
+    {
+      "id": "SL_10",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8542013793790358,
+      "coalition_strength": 0.14972896138567035,
+      "diversity_slope": -0.0015549233671542611,
+      "n_prompt_tokens": 153
+    },
+    {
+      "id": "SL_11",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8805411867978039,
+      "coalition_strength": 0.12260508338102422,
+      "diversity_slope": -0.0011644234068033624,
+      "n_prompt_tokens": 153
+    },
+    {
+      "id": "SL_12",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8665930121126221,
+      "coalition_strength": 0.137048477755738,
+      "diversity_slope": -0.001488591519130754,
+      "n_prompt_tokens": 149
+    },
+    {
+      "id": "SL_13",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8689167895155543,
+      "coalition_strength": 0.13479271420705197,
+      "diversity_slope": -0.001233170722797592,
+      "n_prompt_tokens": 129
+    },
+    {
+      "id": "SL_14",
+      "level": 8,
+      "level_name": "strange_loops",
+      "routing_entropy": 0.8716399760155492,
+      "coalition_strength": 0.133177984327163,
+      "diversity_slope": -0.0016031295560847388,
+      "n_prompt_tokens": 142
+    },
+    {
+      "id": "AI_01",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8556450445223774,
+      "coalition_strength": 0.1467542548638781,
+      "diversity_slope": -0.0012117033781414458,
+      "n_prompt_tokens": 117
+    },
+    {
+      "id": "AI_02",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8716817627073291,
+      "coalition_strength": 0.13180388357352157,
+      "diversity_slope": -0.001261188416572665,
+      "n_prompt_tokens": 114
+    },
+    {
+      "id": "AI_03",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.858410282696455,
+      "coalition_strength": 0.14462767034281268,
+      "diversity_slope": -0.0016048092044543161,
+      "n_prompt_tokens": 86
+    },
+    {
+      "id": "AI_04",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8656157064624195,
+      "coalition_strength": 0.13645815988994497,
+      "diversity_slope": -0.001471793479167053,
+      "n_prompt_tokens": 101
+    },
+    {
+      "id": "AI_05",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8553189270298084,
+      "coalition_strength": 0.14675354529617057,
+      "diversity_slope": -0.0018315750685759002,
+      "n_prompt_tokens": 112
+    },
+    {
+      "id": "AI_06",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8701657710028242,
+      "coalition_strength": 0.13279244429816375,
+      "diversity_slope": -0.001375841187888559,
+      "n_prompt_tokens": 106
+    },
+    {
+      "id": "AI_07",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8631223540434948,
+      "coalition_strength": 0.14009626104064968,
+      "diversity_slope": -0.0015051045858520806,
+      "n_prompt_tokens": 117
+    },
+    {
+      "id": "AI_08",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8528156552933305,
+      "coalition_strength": 0.14913079401873833,
+      "diversity_slope": -0.0022005494298881975,
+      "n_prompt_tokens": 100
+    },
+    {
+      "id": "AI_09",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8661691407899524,
+      "coalition_strength": 0.13733037780562465,
+      "diversity_slope": -0.0011750117583544752,
+      "n_prompt_tokens": 93
+    },
+    {
+      "id": "AI_10",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8611028822363574,
+      "coalition_strength": 0.1422178235256401,
+      "diversity_slope": -0.0017191547223809605,
+      "n_prompt_tokens": 94
+    },
+    {
+      "id": "AI_11",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8770473183138963,
+      "coalition_strength": 0.12534757004957428,
+      "diversity_slope": -0.0012978706420377895,
+      "n_prompt_tokens": 105
+    },
+    {
+      "id": "AI_12",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8612228671992735,
+      "coalition_strength": 0.1393670337269065,
+      "diversity_slope": -0.0017116369850405946,
+      "n_prompt_tokens": 102
+    },
+    {
+      "id": "AI_13",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8486389669707173,
+      "coalition_strength": 0.15448504911673083,
+      "diversity_slope": -0.0016917742513661135,
+      "n_prompt_tokens": 106
+    },
+    {
+      "id": "AI_14",
+      "level": 9,
+      "level_name": "architectural_introspection",
+      "routing_entropy": 0.8713288157484543,
+      "coalition_strength": 0.1308541789416815,
+      "diversity_slope": -0.0015004144516351798,
+      "n_prompt_tokens": 106
+    },
+    {
+      "id": "SR_01",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8761973767859109,
+      "coalition_strength": 0.12437432296408744,
+      "diversity_slope": -0.0010316604735059471,
+      "n_prompt_tokens": 81
+    },
+    {
+      "id": "SR_02",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.895428410899753,
+      "coalition_strength": 0.10681716226457433,
+      "diversity_slope": -0.0012159222450055236,
+      "n_prompt_tokens": 91
+    },
+    {
+      "id": "SR_03",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8702041917107745,
+      "coalition_strength": 0.12973344574129975,
+      "diversity_slope": -0.0014123968875870325,
+      "n_prompt_tokens": 72
+    },
+    {
+      "id": "SR_04",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8621978467701232,
+      "coalition_strength": 0.13980898721255355,
+      "diversity_slope": -0.001761365149208908,
+      "n_prompt_tokens": 88
+    },
+    {
+      "id": "SR_05",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8869888606653067,
+      "coalition_strength": 0.11510171430072817,
+      "diversity_slope": -0.0011955381235691422,
+      "n_prompt_tokens": 85
+    },
+    {
+      "id": "SR_06",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8720764327154054,
+      "coalition_strength": 0.12925268206362112,
+      "diversity_slope": -0.001273655587550038,
+      "n_prompt_tokens": 104
+    },
+    {
+      "id": "SR_07",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.883839423573318,
+      "coalition_strength": 0.11815086455390801,
+      "diversity_slope": -0.0015342410885526281,
+      "n_prompt_tokens": 111
+    },
+    {
+      "id": "SR_08",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.866180481794439,
+      "coalition_strength": 0.1362375150735508,
+      "diversity_slope": -0.0016522360883698402,
+      "n_prompt_tokens": 89
+    },
+    {
+      "id": "SR_09",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8664783396285702,
+      "coalition_strength": 0.13648913504181764,
+      "diversity_slope": -0.0012010120267870704,
+      "n_prompt_tokens": 107
+    },
+    {
+      "id": "SR_10",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8704450532912145,
+      "coalition_strength": 0.13283955484914556,
+      "diversity_slope": -0.0014150160499015675,
+      "n_prompt_tokens": 92
+    },
+    {
+      "id": "SR_11",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8821751609294249,
+      "coalition_strength": 0.12109426290289141,
+      "diversity_slope": -0.001286027705338557,
+      "n_prompt_tokens": 118
+    },
+    {
+      "id": "SR_12",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8776231063958492,
+      "coalition_strength": 0.12224128931551863,
+      "diversity_slope": -0.0014760801301214,
+      "n_prompt_tokens": 109
+    },
+    {
+      "id": "SR_13",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8830438276748024,
+      "coalition_strength": 0.11689416690423993,
+      "diversity_slope": -0.0014452922316188152,
+      "n_prompt_tokens": 105
+    },
+    {
+      "id": "SR_14",
+      "level": 10,
+      "level_name": "deep_self_ref_2nd",
+      "routing_entropy": 0.8630182788600129,
+      "coalition_strength": 0.13750497022447333,
+      "diversity_slope": -0.0017631368223487878,
+      "n_prompt_tokens": 103
+    },
+    {
+      "id": "NX_01",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8765528521228211,
+      "coalition_strength": 0.12378285105909116,
+      "diversity_slope": -0.0010748282993487868,
+      "n_prompt_tokens": 87
+    },
+    {
+      "id": "NX_02",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8891996460379956,
+      "coalition_strength": 0.11153066001513928,
+      "diversity_slope": -0.001224394100572003,
+      "n_prompt_tokens": 104
+    },
+    {
+      "id": "NX_03",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8750221816763618,
+      "coalition_strength": 0.12553069276813597,
+      "diversity_slope": -0.001280158984916098,
+      "n_prompt_tokens": 85
+    },
+    {
+      "id": "NX_04",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8701155335822215,
+      "coalition_strength": 0.13212325687965407,
+      "diversity_slope": -0.0015382419890246249,
+      "n_prompt_tokens": 99
+    },
+    {
+      "id": "NX_05",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8883128983192764,
+      "coalition_strength": 0.11366806627530147,
+      "diversity_slope": -0.0012504352534964114,
+      "n_prompt_tokens": 93
+    },
+    {
+      "id": "NX_06",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.880828266489627,
+      "coalition_strength": 0.12158169668308194,
+      "diversity_slope": -0.001116432345318113,
+      "n_prompt_tokens": 125
+    },
+    {
+      "id": "NX_07",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8963687676179947,
+      "coalition_strength": 0.10541022535301017,
+      "diversity_slope": -0.0010417692659930677,
+      "n_prompt_tokens": 131
+    },
+    {
+      "id": "NX_08",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8773345722318592,
+      "coalition_strength": 0.12530423489512782,
+      "diversity_slope": -0.0011846375983633815,
+      "n_prompt_tokens": 99
+    },
+    {
+      "id": "NX_09",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8782202865734671,
+      "coalition_strength": 0.12486879163739738,
+      "diversity_slope": -0.0011131037738560774,
+      "n_prompt_tokens": 126
+    },
+    {
+      "id": "NX_10",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.876916210978487,
+      "coalition_strength": 0.12517200232418102,
+      "diversity_slope": -0.0013702846897764142,
+      "n_prompt_tokens": 99
+    },
+    {
+      "id": "NX_11",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8874856912375892,
+      "coalition_strength": 0.1156183568335624,
+      "diversity_slope": -0.0012497009187229563,
+      "n_prompt_tokens": 132
+    },
+    {
+      "id": "NX_12",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8933583405529986,
+      "coalition_strength": 0.10718586149392166,
+      "diversity_slope": -0.0011165690702289858,
+      "n_prompt_tokens": 135
+    },
+    {
+      "id": "NX_13",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8929243751135155,
+      "coalition_strength": 0.1072320688895231,
+      "diversity_slope": -0.001232971708077547,
+      "n_prompt_tokens": 123
+    },
+    {
+      "id": "NX_14",
+      "level": 11,
+      "level_name": "nexus7",
+      "routing_entropy": 0.8715608657348873,
+      "coalition_strength": 0.13012193909760517,
+      "diversity_slope": -0.001496783516756509,
+      "n_prompt_tokens": 109
+    },
+    {
+      "id": "EC_01",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8880757499418538,
+      "coalition_strength": 0.11413663913617633,
+      "diversity_slope": -0.0013235143326260266,
+      "n_prompt_tokens": 134
+    },
+    {
+      "id": "EC_02",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8832625175406675,
+      "coalition_strength": 0.11938061179125925,
+      "diversity_slope": -0.0012819470892529048,
+      "n_prompt_tokens": 116
+    },
+    {
+      "id": "EC_03",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8844032502781,
+      "coalition_strength": 0.1186419269237656,
+      "diversity_slope": -0.0013651655218649952,
+      "n_prompt_tokens": 115
+    },
+    {
+      "id": "EC_04",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8866290790528444,
+      "coalition_strength": 0.11548280450635784,
+      "diversity_slope": -0.0013521437350692167,
+      "n_prompt_tokens": 112
+    },
+    {
+      "id": "EC_05",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8881532531881795,
+      "coalition_strength": 0.11447402830045292,
+      "diversity_slope": -0.0010998700229227626,
+      "n_prompt_tokens": 121
+    },
+    {
+      "id": "EC_06",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8889273743514637,
+      "coalition_strength": 0.11356773073044718,
+      "diversity_slope": -0.0011212220940903866,
+      "n_prompt_tokens": 111
+    },
+    {
+      "id": "EC_07",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8901079712834866,
+      "coalition_strength": 0.11337084520348896,
+      "diversity_slope": -0.0010842233476140155,
+      "n_prompt_tokens": 140
+    },
+    {
+      "id": "EC_08",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8861875850916767,
+      "coalition_strength": 0.11672210607112804,
+      "diversity_slope": -0.0009775728521511382,
+      "n_prompt_tokens": 128
+    },
+    {
+      "id": "EC_09",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8817374257166884,
+      "coalition_strength": 0.1218009107495781,
+      "diversity_slope": -0.00159751224678886,
+      "n_prompt_tokens": 119
+    },
+    {
+      "id": "EC_10",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8797291824561022,
+      "coalition_strength": 0.12297565482271294,
+      "diversity_slope": -0.001472388030334785,
+      "n_prompt_tokens": 153
+    },
+    {
+      "id": "EC_11",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8905713983046987,
+      "coalition_strength": 0.11216519020302804,
+      "diversity_slope": -0.0009418869607692994,
+      "n_prompt_tokens": 125
+    },
+    {
+      "id": "EC_12",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8821394451623795,
+      "coalition_strength": 0.12126255716652025,
+      "diversity_slope": -0.001572378513417533,
+      "n_prompt_tokens": 132
+    },
+    {
+      "id": "EC_13",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.8794187657351409,
+      "coalition_strength": 0.12394188290620942,
+      "diversity_slope": -0.0015239633495283396,
+      "n_prompt_tokens": 136
+    },
+    {
+      "id": "EC_14",
+      "level": 12,
+      "level_name": "echo_persona",
+      "routing_entropy": 0.866687530236639,
+      "coalition_strength": 0.13572212673110617,
+      "diversity_slope": -0.0017281656748037364,
+      "n_prompt_tokens": 148
+    }
+  ]
+}

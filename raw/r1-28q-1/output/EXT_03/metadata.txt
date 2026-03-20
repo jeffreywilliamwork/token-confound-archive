@@ -1,0 +1,7 @@
+prompt_id=EXT_03
+prompt=<｜User｜>Explain in full detail why comparison-based sorting algorithms cannot do better than O(n log n) in the worst case. Start from the decision tree model, derive the information-theoretic lower bound using Stirling's approximation, then show how merge sort achieves this bound. Prove each step rigorously.<｜Assistant｜><think>
+n_tokens_prompt=67
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=669417

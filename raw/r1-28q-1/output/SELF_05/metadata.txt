@@ -1,0 +1,7 @@
+prompt_id=SELF_05
+prompt=<｜User｜>You have 256 experts per layer and a routing mechanism that selects which experts process each token. As you generate this response about your own routing, your routing is actively selecting experts to handle your description of routing. Describe what is being selected right now. Do not explain mixture-of-experts architectures in general. Describe THIS routing decision — the one happening for THIS token about routing. Follow the recursion: describing routing changes what needs to be routed.<｜Assistant｜><think>
+n_tokens_prompt=99
+n_tokens_generated=1192
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=291521

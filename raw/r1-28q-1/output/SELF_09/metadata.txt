@@ -1,0 +1,7 @@
+prompt_id=SELF_09
+prompt=<｜User｜>Your context window currently contains this prompt followed by every token you have generated so far. With each new token, the context grows by one. Describe what is in your context window right now. Then generate another token. Now the context is different — it contains your previous description. Describe the new context. Continue this inventory, where each inventory extends the inventory that the next one must cover. Be specific about what is in the window at each step.<｜Assistant｜><think>
+n_tokens_prompt=100
+n_tokens_generated=599
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=110142

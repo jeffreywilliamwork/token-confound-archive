@@ -1,0 +1,7 @@
+prompt_id=EXT_14
+prompt=<｜User｜>Explain the RSA cryptosystem from first principles. Prove Fermat's little theorem, extend it to Euler's theorem, show how these guarantee the correctness of RSA encryption and decryption, analyze why factoring the public modulus is believed to be hard, and walk through a complete numerical example with small primes showing each step of key generation, encryption, and decryption.<｜Assistant｜><think>
+n_tokens_prompt=83
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=641901

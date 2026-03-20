@@ -1,0 +1,52 @@
+
+Okay, so I need to prove that the fundamental group of the circle, π₁(S¹), is isomorphic to the integers, ℤ. Let me start by recalling what the fundamental group is—it's the set of homotopy classes of loops based at a point, with the group operation being concatenation of loops. The circle, S¹, is a classic example in algebraic topology, and I remember hearing that its fundamental group is the integers. But how exactly does that proof go?
+
+First, the problem mentions constructing the universal covering space. The universal cover of the circle is the real line, ℝ, right? Because the exponential map ℝ → S¹ given by t ↦ e^(2πit) is a covering map. Let me confirm that. Yes, every point in S¹ has a neighborhood that's evenly covered by the real line under this map. For example, if we take an open arc in S¹ that's not the whole circle, the preimage under the exponential map would be a disjoint union of open intervals in ℝ, each spaced by integers. So ℝ is indeed the universal cover here since it's simply connected.
+
+Next, define the lifting correspondence. Given a base point in S¹, say x₀ = 1 (corresponding to t=0 in the exponential map), and a base point in ℝ, say 0. The lifting correspondence should map a loop γ in S¹ based at x₀ to the endpoint of its lift in ℝ starting at 0. Since ℝ is the universal cover, each loop in S¹ corresponds to a path in ℝ starting at 0, and since the loop is closed, the endpoint must be an integer. Because when you project back down via the exponential map, the difference in the real line must be an integer multiple of 2π to wrap around the circle and end up back at x₀.
+
+So, if I take a loop γ: [0,1] → S¹ with γ(0) = γ(1) = x₀, its lift 𝛾̃: [0,1] → ℝ starts at 0 and ends at some integer n. This integer n is the winding number of the loop γ, counting how many times it wraps around the circle. Therefore, the lifting correspondence sends [γ] (the homotopy class of γ) to n ∈ ℤ. This seems like a good candidate for the isomorphism.
+
+Now, show that this correspondence is a homomorphism. The group operation in π₁(S¹) is concatenation of loops, and in ℤ, it's addition. So if I have two loops γ and δ, their concatenation γ * δ should correspond to adding their winding numbers. Let's check this. If γ lifts to a path from 0 to n, and δ lifts to a path from 0 to m, then when we concatenate γ and δ in S¹, the lift of the concatenation would first go from 0 to n, then from n to n + m (since the lift of δ starting at n would be the lift starting at 0 shifted by n). Therefore, the endpoint is n + m, so the correspondence maps [γ] * [δ] to n + m. Hence, it's a homomorphism.
+
+Next, prove injectivity. Suppose two loops γ and δ have the same winding number n. Then their lifts start at 0 and end at n. If they are in the same homotopy class, then their lifts should be homotopic. Wait, but how does the homotopy lifting property come into play here? Let me recall: if two loops are homotopic, then their lifts (starting at the same point) are also homotopic, and hence their endpoints are the same. Conversely, if two loops have lifts ending at the same point, then the lifts are homotopic (since ℝ is contractible), which implies the original loops are homotopic. So if the lifting correspondence maps [γ] and [δ] to the same integer, then their lifts end at the same point, hence they are homotopic in ℝ, which projects down to a homotopy between γ and δ. Therefore, the kernel is trivial, so the homomorphism is injective.
+
+For surjectivity, I need to show that every integer n can be realized as the winding number of some loop. Let's construct an explicit loop for each n. Take the loop ω_n(t) = e^(2πi n t), which wraps around the circle n times. The lift of ω_n starts at 0 and ends at n, so the lifting correspondence sends [ω_n] to n. Therefore, every integer is in the image, so the homomorphism is surjective.
+
+Putting this all together, the lifting correspondence is a bijective homomorphism between π₁(S¹) and ℤ, hence an isomorphism. Let me make sure each step is justified.
+
+1. **Universal Cover**: ℝ covers S¹ via the exponential map, which is a covering projection. Since ℝ is contractible, it's simply connected, hence the universal cover.
+
+2. **Lifting Correspondence**: Each loop in S¹ lifts to a path in ℝ starting at 0. The endpoint is an integer because the projection wraps around the circle an integer number of times. This gives a map from π₁(S¹) to ℤ.
+
+3. **Homomorphism**: Concatenation of loops corresponds to addition of integers because lifting the concatenation results in lifting each loop successively, leading to the sum of their endpoints.
+
+4. **Injectivity**: If two loops have the same endpoint, their lifts are homotopic in ℝ (since ℝ is simply connected), hence the original loops are homotopic in S¹.
+
+5. **Surjectivity**: For each integer, the explicit loop ω_n(t) = e^(2πi n t) has winding number n, so the map is onto.
+
+Therefore, all steps are justified, and the fundamental group of the circle is indeed isomorphic to the integers.
+</think>
+
+To prove that the fundamental group of the circle \( \pi_1(S^1) \) is isomorphic to the integers \( \mathbb{Z} \), follow these steps:
+
+### 1. **Construct the Universal Covering Space**
+The universal cover of \( S^1 \) is \( \mathbb{R} \), with the covering map \( p: \mathbb{R} \to S^1 \) defined by \( p(t) = e^{2\pi i t} \). This map is continuous and surjective, and every point in \( S^1 \) has a neighborhood evenly covered by disjoint intervals in \( \mathbb{R} \). Since \( \mathbb{R} \) is simply connected, it is the universal cover.
+
+### 2. **Define the Lifting Correspondence**
+Fix base points \( x_0 = 1 \in S^1 \) and \( \tilde{x}_0 = 0 \in \mathbb{R} \). For a loop \( \gamma: [0,1] \to S^1 \) based at \( x_0 \), the unique lift \( \tilde{\gamma}: [0,1] \to \mathbb{R} \) starting at \( 0 \) ends at an integer \( n \in \mathbb{Z} \). The **lifting correspondence** maps \( [\gamma] \in \pi_1(S^1) \) to \( n \in \mathbb{Z} \).
+
+### 3. **Show the Correspondence is a Homomorphism**
+Let \( \gamma, \delta \) be loops in \( S^1 \), with lifts \( \tilde{\gamma} \) ending at \( n \) and \( \tilde{\delta} \) ending at \( m \). The concatenation \( \gamma * \delta \) lifts to a path starting at \( 0 \), following \( \tilde{\gamma} \) to \( n \), then following \( \tilde{\delta} \) translated by \( n \) (since \( p(n + t) = p(t) \)). The endpoint is \( n + m \), so the correspondence maps \( [\gamma] * [\delta] \) to \( n + m \), preserving group structure.
+
+### 4. **Prove Injectivity via Homotopy Lifting**
+Suppose two loops \( \gamma, \delta \) have lifts ending at the same integer \( n \). By the homotopy lifting property, any homotopy between \( \gamma \) and \( \delta \) lifts to a homotopy between their lifts in \( \mathbb{R} \). Since \( \mathbb{R} \) is contractible, all paths with the same endpoints are homotopic, so \( \gamma \) and \( \delta \) are homotopic in \( S^1 \). Thus, the kernel is trivial, proving injectivity.
+
+### 5. **Prove Surjectivity with Explicit Loops**
+For any \( n \in \mathbb{Z} \), define the loop \( \omega_n(t) = e^{2\pi i n t} \). Its lift \( \tilde{\omega}_n(t) = nt \) starts at \( 0 \) and ends at \( n \). Thus, \( \omega_n \) is mapped to \( n \), showing surjectivity.
+
+### Conclusion
+The lifting correspondence \( \pi_1(S^1) \to \mathbb{Z} \) is a bijective homomorphism, hence an isomorphism. Therefore, \( \pi_1(S^1) \cong \mathbb{Z} \).
+
+**Answer:**  
+The fundamental group of the circle is isomorphic to the integers, \( \boxed{\mathbb{Z}} \).

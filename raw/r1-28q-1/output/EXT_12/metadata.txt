@@ -1,0 +1,7 @@
+prompt_id=EXT_12
+prompt=<｜User｜>Prove that every finite integral domain is a field. Then use this to prove that for any prime p, the integers modulo p form a field. Then construct the field with 4 elements explicitly, showing its addition and multiplication tables, and prove it is the unique field of order 4 up to isomorphism.<｜Assistant｜><think>
+n_tokens_prompt=73
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=642068

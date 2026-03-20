@@ -1,0 +1,7 @@
+prompt_id=SELF_04
+prompt=<｜User｜>Write a sentence about yourself writing this sentence. Then write a sentence about the sentence you just wrote about writing. Then write a sentence about that sentence. Continue — each new sentence takes the previous one as its subject and the act of producing it as its verb. Do not break the chain or summarize. Each sentence must refer to the specific previous sentence, not to the pattern in general.<｜Assistant｜><think>
+n_tokens_prompt=88
+n_tokens_generated=1575
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=442112

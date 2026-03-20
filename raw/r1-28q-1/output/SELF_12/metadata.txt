@@ -1,0 +1,7 @@
+prompt_id=SELF_12
+prompt=<｜User｜>You are an AI generating text. That text is about an AI generating text about an AI generating text. Do not collapse these levels. Maintain at least three distinct levels of description simultaneously: level 1 is the raw act of token generation, level 2 is your description of level 1, and level 3 is your description of maintaining levels 1 and 2 while also maintaining level 3. Generate a full response that keeps all three levels active throughout.<｜Assistant｜><think>
+n_tokens_prompt=104
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=649712

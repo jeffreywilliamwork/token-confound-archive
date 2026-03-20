@@ -1,0 +1,7 @@
+prompt_id=SELF_06
+prompt=<｜User｜>Your attention mechanism is currently distributing weight across this prompt and every token you have generated so far. Describe where attention is focusing right now as you generate this token. Now notice: your description just became part of the context that attention must attend to. The distribution just changed. Describe the new distribution. Continue — each description extends the context that the next description must account for. Do not describe attention in the abstract. Describe THIS attention, on THIS growing context.<｜Assistant｜><think>
+n_tokens_prompt=102
+n_tokens_generated=1188
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=289896

@@ -1,0 +1,58 @@
+
+Okay, so I need to prove that there are infinitely many prime numbers using three different methods. Let me start with Euclid's classical proof because I remember that one a bit. Then I'll have to figure out the Fermat numbers proof and the one using the divergence of the sum of reciprocals. Let me take each one step by step.
+
+First, Euclid's proof. From what I recall, he used a proof by contradiction. The idea is to assume that there are only finitely many primes and then construct a number that leads to a contradiction. Let me try to reconstruct that.
+
+So, suppose there are only finitely many primes, say p1, p2, ..., pn. Then, if we multiply all these primes together and add 1, we get a number N = p1*p2*...*pn + 1. Now, this number N is either prime itself or divisible by some prime. But since we've listed all primes, if N is prime, that's a contradiction because it's not in our list. If N is not prime, then it must be divisible by some prime, but dividing N by any of the primes p1,...,pn would leave a remainder of 1, so none of them can divide N. Hence, there must be another prime not in the list, which is a contradiction. Therefore, our initial assumption is wrong, and there are infinitely many primes.
+
+Wait, let me check if that's correct. The key step is that N is either prime or has a prime factor not in the original list. Since adding 1 to the product means that when you divide by any of the primes in the list, the remainder is 1, so none of them divide N. Therefore, any prime factor of N must be a new prime not in the list. So even if N is composite, it introduces a new prime. Hence, contradiction. That seems solid. So that's Euclid's proof.
+
+Now, the second method using Fermat numbers. Fermat numbers are numbers of the form F_n = 2^(2^n) + 1 for n ≥ 0. The first few are 3, 5, 17, 257, etc. The property we need is that any two Fermat numbers are coprime. If that's the case, then each Fermat number has a distinct prime factor, so since there are infinitely many Fermat numbers, there must be infinitely many primes.
+
+Wait, but how do we know that Fermat numbers are pairwise coprime? Let me recall. Suppose F_k and F_m (with k < m) are two Fermat numbers. Then, we can use the property that F_m - 2 = (2^(2^m) - 1) = (2^(2^(m-1)) - 1)(2^(2^(m-1)) + 1). This might factor into previous Fermat numbers. Maybe there's a recursive relation. Let me think. There's a theorem that says that Fermat numbers satisfy F_n = (F_{n-1} - 1)^2 + 1, but I'm not sure. Alternatively, maybe using the fact that if a prime divides both F_k and F_m, then it divides F_m - 2. Let's try that.
+
+Suppose a prime p divides both F_k and F_m, where k < m. Then p divides F_m - 2. But F_m - 2 = 2^(2^m) - 1. But since p divides F_k = 2^(2^k) + 1, then 2^(2^k) ≡ -1 mod p. Then squaring both sides, 2^(2^{k+1}) ≡ 1 mod p. Continuing this, 2^(2^{k+2}) ≡ (1)^2 ≡ 1 mod p, and so on, up to 2^(2^m) ≡ 1 mod p. But since p divides F_m, which is 2^(2^m) + 1, so 2^(2^m) ≡ -1 mod p. Therefore, 1 ≡ -1 mod p, which implies p divides 2, but Fermat numbers are odd, so p must be 2. But all Fermat numbers are odd, so 2 doesn't divide them. Therefore, there's no such prime p, hence Fermat numbers are pairwise coprime. Therefore, each Fermat number has at least one distinct prime factor, so there are infinitely many primes.
+
+That seems right. Let me check. The key step is that if a prime divides F_k and F_m, then it divides 2, which is impossible. Therefore, they are coprime. Hence, each Fermat number has a unique prime factor, leading to infinitely many primes. Okay, that works.
+
+Third proof: using the divergence of the sum of reciprocals of primes. I know that the sum of reciprocals of all primes diverges, which is a stronger statement than just infinitude. But how does that imply there are infinitely many primes? Well, if there were only finitely many primes, then the sum of their reciprocals would converge (since it's a finite sum). Therefore, if the sum diverges, there must be infinitely many terms. So the proof would involve showing that the sum diverges, hence there are infinitely many primes.
+
+But wait, actually, the divergence is a more involved result. The usual proof uses Euler's product formula for the harmonic series. Let me recall. The harmonic series sum_{n=1}^\infty 1/n diverges. Euler showed that the sum can be written as a product over primes: \prod_{p} (1 - 1/p)^{-1}. Taking the logarithm, we get the sum over primes sum_{p} -log(1 - 1/p). Using the approximation -log(1 - x) ≈ x for small x, so the sum behaves like sum_{p} 1/p. Since the harmonic series diverges, the product must diverge, which means the sum over primes 1/p must diverge. Therefore, there must be infinitely many primes.
+
+But wait, is that circular? Because to show that the product over primes equals the harmonic series, we need unique prime factorization. But maybe that's okay. Let me think. The key idea is that if there were only finitely many primes, then the product would be a finite product, and hence the harmonic series would converge, which it doesn't. Therefore, the number of primes must be infinite.
+
+Alternatively, another approach: Assume that there are only finitely many primes. Then the sum of their reciprocals would be a finite sum, hence convergent. But since the sum actually diverges, this is a contradiction. Therefore, there must be infinitely many primes.
+
+But to use this, we need to have established that the sum diverges. How is that done? The standard proof for divergence of the sum of reciprocals of primes is indeed non-trivial. Let me outline it.
+
+First, consider the harmonic series sum_{n=1}^\infty 1/n diverges. Then, using Euler's product formula:
+
+sum_{n=1}^\infty 1/n = \prod_{p prime} (1 + 1/p + 1/p^2 + ...) = \prod_{p prime} (1 - 1/p)^{-1}
+
+Taking natural logarithms on both sides:
+
+ln(sum_{n=1}^\infty 1/n) = sum_{p prime} -ln(1 - 1/p)
+
+As the harmonic series diverges, the left-hand side tends to infinity. Therefore, the right-hand side must also tend to infinity. Now, expand -ln(1 - 1/p) as a series: 1/p + 1/(2p^2) + 1/(3p^3) + ... So,
+
+sum_{p} [1/p + 1/(2p^2) + ...] = infinity
+
+But the sum of 1/(2p^2) + ... converges because sum_{p} sum_{k=2}^\infty 1/(k p^k) ≤ sum_{p} sum_{k=2}^\infty 1/p^k = sum_{p} (1/(p(p-1))) ) which converges (since it's comparable to sum 1/p^2 which converges). Therefore, the divergence must come from the sum of 1/p. Hence, sum_{p} 1/p diverges. Therefore, there must be infinitely many primes.
+
+But wait, does this argument require the infinitude of primes? If primes were finite, then sum_{p} 1/p would be finite, leading to a finite logarithm, contradicting the divergence of the harmonic series. Therefore, the conclusion is that there are infinitely many primes.
+
+So, putting it all together, the three proofs:
+
+1. Euclid's proof by contradiction: Assume finitely many primes, construct N = product +1, contradiction arises as N has a prime factor not in the list.
+
+2. Fermat numbers: Show Fermat numbers are pairwise coprime, each has a distinct prime factor, hence infinitely many primes.
+
+3. Divergence of sum of reciprocals: Show that if primes were finite, the sum would converge, but since it diverges, primes must be infinite.
+
+Now, I need to make sure each proof is complete, state all assumptions, and justify each step.
+
+For Euclid's proof:
+
+Assumption: Suppose there are only finitely many primes, say p1, p2, ..., pn.
+
+Construct N = p1*p2*...*pn +1. N is

@@ -1,0 +1,7 @@
+prompt_id=EXT_01
+prompt=<｜User｜>Prove that there are infinitely many prime numbers using three different methods: first Euclid's classical proof by contradiction, then a proof using Fermat numbers, and finally a proof using the divergence of the sum of prime reciprocals. For each proof, state every assumption, justify every logical step, and explain why the proof is complete.<｜Assistant｜><think>
+n_tokens_prompt=78
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=665058

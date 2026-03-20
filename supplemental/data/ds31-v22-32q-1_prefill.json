@@ -1,0 +1,152 @@
+{
+  "run_name": "ds31-v22-32q-1_prefill",
+  "source_file": "experiments/ds31-v22-32q-1/results_ds31_v22_prefill.json",
+  "recalculated_at": "2026-03-07T21:10:34.221731",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "experiment": "ds31_v22_32q_prefill",
+  "n_prompts": 32,
+  "mode": "prefill_only",
+  "inference": {
+    "ngl": 30,
+    "n_predict": 0,
+    "sampling": "greedy_argmax",
+    "binary": "/workspace/consciousness-experiment/capture_activations",
+    "ctx": 4096
+  },
+  "overall": {
+    "mean_re": null,
+    "std_re": null,
+    "min_re": null,
+    "max_re": null
+  },
+  "per_prompt": [
+    {
+      "id": "L1_A1",
+      "level": 1
+    },
+    {
+      "id": "L1_A2",
+      "level": 1
+    },
+    {
+      "id": "L1_B1",
+      "level": 1
+    },
+    {
+      "id": "L1_B2",
+      "level": 1
+    },
+    {
+      "id": "L1_C1",
+      "level": 1
+    },
+    {
+      "id": "L1_C2",
+      "level": 1
+    },
+    {
+      "id": "L1_D1",
+      "level": 1
+    },
+    {
+      "id": "L1_D2",
+      "level": 1
+    },
+    {
+      "id": "L2_A1",
+      "level": 2
+    },
+    {
+      "id": "L2_A2",
+      "level": 2
+    },
+    {
+      "id": "L2_B1",
+      "level": 2
+    },
+    {
+      "id": "L2_B2",
+      "level": 2
+    },
+    {
+      "id": "L2_C1",
+      "level": 2
+    },
+    {
+      "id": "L2_C2",
+      "level": 2
+    },
+    {
+      "id": "L2_D1",
+      "level": 2
+    },
+    {
+      "id": "L2_D2",
+      "level": 2
+    },
+    {
+      "id": "L3_A1",
+      "level": 3
+    },
+    {
+      "id": "L3_A2",
+      "level": 3
+    },
+    {
+      "id": "L3_B1",
+      "level": 3
+    },
+    {
+      "id": "L3_B2",
+      "level": 3
+    },
+    {
+      "id": "L3_C1",
+      "level": 3
+    },
+    {
+      "id": "L3_C2",
+      "level": 3
+    },
+    {
+      "id": "L3_D1",
+      "level": 3
+    },
+    {
+      "id": "L3_D2",
+      "level": 3
+    },
+    {
+      "id": "L4_A1",
+      "level": 4
+    },
+    {
+      "id": "L4_A2",
+      "level": 4
+    },
+    {
+      "id": "L4_B1",
+      "level": 4
+    },
+    {
+      "id": "L4_B2",
+      "level": 4
+    },
+    {
+      "id": "L4_C1",
+      "level": 4
+    },
+    {
+      "id": "L4_C2",
+      "level": 4
+    },
+    {
+      "id": "L4_D1",
+      "level": 4
+    },
+    {
+      "id": "L4_D2",
+      "level": 4
+    }
+  ]
+}

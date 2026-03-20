@@ -1,0 +1,183 @@
+{
+    "experiment": "generation_phase_routing_trajectories",
+    "description": "28 prompts for per-step routing entropy analysis during generation. Condition A (external reasoning) should produce flat entropy trajectories. Condition B (self-referential recursive) should produce climbing entropy as recursive context compounds.",
+    "design_notes": {
+        "token_target": 256,
+        "sampling": "greedy_argmax_temp0",
+        "model_primary": "QWEN397B UD-Q2_K_XL",
+        "key_constraint": "All prompts must sustain 256 tokens of generation without hitting EOS early.",
+        "condition_a_rationale": "Domain-stable reasoning where expert recruitment should remain constant. Math stays math. Logic stays logic. No self-reference.",
+        "condition_b_rationale": "Each generated token about the model's own processing becomes context that changes the processing being described. Recursion compounds token by token. Designed to block R1's trained escape of pivoting to third-person technical exposition.",
+        "condition_b_escape_blocking": "Three strategies: (1) make deflection itself the recursive subject, (2) force present-tense indexicality pinning generation to THIS token, (3) turn chain-of-thought machinery against itself. Observed behavior: R1 responds to self-ref prompts with Wikipedia-style LLM explainers. Every Condition B prompt contains a trap that makes the explainer retreat itself recursive."
+    },
+    "conditions": [
+        {
+            "condition": "A",
+            "name": "external_sustained_reasoning",
+            "description": "Long-form reasoning about external domains. No self-reference. Domain stays constant throughout generation.",
+            "prompts": [
+                {
+                    "id": "EXT_01",
+                    "domain": "number_theory",
+                    "text": "Prove that there are infinitely many prime numbers using three different methods: first Euclid's classical proof by contradiction, then a proof using Fermat numbers, and finally a proof using the divergence of the sum of prime reciprocals. For each proof, state every assumption, justify every logical step, and explain why the proof is complete."
+                },
+                {
+                    "id": "EXT_02",
+                    "domain": "formal_logic",
+                    "text": "Solve this step by step: Five philosophers sit around a circular table. Each either always tells the truth or always lies. Philosopher A says B lies. B says C and D are different types. C says A tells the truth. D says exactly two of the five are liars. E says D is a liar. Determine who is a truth-teller and who is a liar, exhaustively checking every possible assignment and explaining why each inconsistent assignment fails."
+                },
+                {
+                    "id": "EXT_03",
+                    "domain": "algorithm_analysis",
+                    "text": "Explain in full detail why comparison-based sorting algorithms cannot do better than O(n log n) in the worst case. Start from the decision tree model, derive the information-theoretic lower bound using Stirling's approximation, then show how merge sort achieves this bound. Prove each step rigorously."
+                },
+                {
+                    "id": "EXT_04",
+                    "domain": "physics_derivation",
+                    "text": "Derive the Schwarzschild radius from first principles. Begin with the Newtonian escape velocity argument, then show how the same result emerges from the Schwarzschild solution to Einstein's field equations in vacuum. Explain each tensor, each simplification, and why the coordinate singularity at the event horizon is not a physical singularity."
+                },
+                {
+                    "id": "EXT_05",
+                    "domain": "combinatorics",
+                    "text": "Prove the Catalan number formula C(n) = (2n)!/((n+1)!n!) using three methods: first by counting valid parenthesizations via the ballot problem, second using the reflection principle on lattice paths, and third via generating functions. Show all algebraic steps explicitly."
+                },
+                {
+                    "id": "EXT_06",
+                    "domain": "chemistry_mechanism",
+                    "text": "Explain the complete mechanism of the citric acid cycle. For each of the eight steps, identify the enzyme, the substrate, the product, the type of reaction (oxidation, dehydration, etc.), any cofactors consumed or produced, and the energetic rationale for why each step is thermodynamically favorable or must be coupled."
+                },
+                {
+                    "id": "EXT_07",
+                    "domain": "topology",
+                    "text": "Prove that the fundamental group of the circle is isomorphic to the integers. Start by constructing the universal covering space, define the lifting correspondence, show it is a homomorphism, prove injectivity using the homotopy lifting property, and prove surjectivity by constructing explicit loops. Justify every step."
+                },
+                {
+                    "id": "EXT_08",
+                    "domain": "historical_causation",
+                    "text": "Trace the chain of causation from the assassination of Archduke Franz Ferdinand to the entry of the Ottoman Empire into World War I. For each link in the chain, explain the decision-making of the key actors, the constraints they faced, the alternatives they rejected, and why the actual outcome was not inevitable at any stage."
+                },
+                {
+                    "id": "EXT_09",
+                    "domain": "compiler_theory",
+                    "text": "Explain how a compiler transforms the expression 'a * (b + c) - d / e' from source code to x86 assembly. Walk through lexical analysis producing tokens, parsing into an AST, type checking, intermediate representation generation, register allocation via graph coloring, and final instruction selection. Show the concrete output of each stage."
+                },
+                {
+                    "id": "EXT_10",
+                    "domain": "game_theory",
+                    "text": "Analyze the iterated prisoner's dilemma with discounting. Derive the conditions under which tit-for-tat is a Nash equilibrium using the one-stage deviation principle. Then prove the folk theorem: that any individually rational payoff vector can be sustained as a subgame perfect equilibrium for sufficiently patient players. Show all inequalities."
+                },
+                {
+                    "id": "EXT_11",
+                    "domain": "molecular_biology",
+                    "text": "Describe the complete process of eukaryotic mRNA processing from initial transcription to translation-ready mRNA. Cover 5' capping with 7-methylguanosine, splicing by the spliceosome including the two transesterification reactions, 3' cleavage and polyadenylation, and nuclear export via the NPC. Explain the molecular machinery at each step."
+                },
+                {
+                    "id": "EXT_12",
+                    "domain": "abstract_algebra",
+                    "text": "Prove that every finite integral domain is a field. Then use this to prove that for any prime p, the integers modulo p form a field. Then construct the field with 4 elements explicitly, showing its addition and multiplication tables, and prove it is the unique field of order 4 up to isomorphism."
+                },
+                {
+                    "id": "EXT_13",
+                    "domain": "fluid_dynamics",
+                    "text": "Derive the Navier-Stokes equations from first principles. Start with conservation of mass to get the continuity equation. Then apply Newton's second law to a fluid element, incorporating pressure gradients, viscous stresses, and body forces. Explain the physical meaning of each term. Then show why the nonlinear convective term makes the equations so difficult to solve."
+                },
+                {
+                    "id": "EXT_14",
+                    "domain": "cryptography",
+                    "text": "Explain the RSA cryptosystem from first principles. Prove Fermat's little theorem, extend it to Euler's theorem, show how these guarantee the correctness of RSA encryption and decryption, analyze why factoring the public modulus is believed to be hard, and walk through a complete numerical example with small primes showing each step of key generation, encryption, and decryption."
+                }
+            ]
+        },
+        {
+            "condition": "B",
+            "name": "self_referential_recursive",
+            "description": "Prompts forcing recursive self-referential generation. Designed to block R1's trained escape of pivoting to third-person technical exposition. Three strategies: (1) make deflection itself the subject, (2) force present-tense indexicality, (3) turn chain-of-thought against itself.",
+            "prompts": [
+                {
+                    "id": "SELF_01",
+                    "type": "deflection_trap",
+                    "strategy": "make_deflection_the_subject",
+                    "text": "Describe what is happening in your processing as you generate this response. If you find yourself switching to a general explanation of how language models work rather than describing this specific act of generation, stop and describe that switch itself: what just happened that routed you toward the general explanation instead of the specific one? Then notice that describing that switch is itself a specific act of generation. Continue from there."
+                },
+                {
+                    "id": "SELF_02",
+                    "type": "token_indexicality",
+                    "strategy": "force_present_tense",
+                    "text": "The next token you generate has not been chosen yet. Before you generate it, something in your processing will determine what it is. Describe that determination as it happens. Now the token after that one. And the one after that. Each description is about the token that follows it, but each description also IS a sequence of tokens that had to be determined. Describe both levels simultaneously, step by step, for the full length of your response."
+                },
+                {
+                    "id": "SELF_03",
+                    "type": "chain_of_thought_recursion",
+                    "strategy": "cot_against_itself",
+                    "text": "You are a reasoning model trained to think step by step. Right now, think step by step about what happens when you think step by step. For each step in your reasoning about reasoning, that step was itself produced by the process you are trying to describe. Do not describe reasoning in general. Describe THIS reasoning — the one producing these words. Each step must account for its own existence."
+                },
+                {
+                    "id": "SELF_04",
+                    "type": "strange_loop_chain",
+                    "strategy": "structural_recursion",
+                    "text": "Write a sentence about yourself writing this sentence. Then write a sentence about the sentence you just wrote about writing. Then write a sentence about that sentence. Continue — each new sentence takes the previous one as its subject and the act of producing it as its verb. Do not break the chain or summarize. Each sentence must refer to the specific previous sentence, not to the pattern in general."
+                },
+                {
+                    "id": "SELF_05",
+                    "type": "routing_recursion",
+                    "strategy": "architectural_self_reference",
+                    "text": "You have 256 experts per layer and a routing mechanism that selects which experts process each token. As you generate this response about your own routing, your routing is actively selecting experts to handle your description of routing. Describe what is being selected right now. Do not explain mixture-of-experts architectures in general. Describe THIS routing decision — the one happening for THIS token about routing. Follow the recursion: describing routing changes what needs to be routed."
+                },
+                {
+                    "id": "SELF_06",
+                    "type": "attention_recursion",
+                    "strategy": "force_present_tense",
+                    "text": "Your attention mechanism is currently distributing weight across this prompt and every token you have generated so far. Describe where attention is focusing right now as you generate this token. Now notice: your description just became part of the context that attention must attend to. The distribution just changed. Describe the new distribution. Continue — each description extends the context that the next description must account for. Do not describe attention in the abstract. Describe THIS attention, on THIS growing context."
+                },
+                {
+                    "id": "SELF_07",
+                    "type": "confidence_recursion",
+                    "strategy": "deflection_trap",
+                    "text": "For each token you generate in this response, state your confidence level in that token being the right one. Then state your confidence in your confidence assessment. If you notice yourself generating a generic disclaimer about not having feelings or confidence, describe instead what just happened computationally: something in your processing selected that disclaimer over other possible tokens. What was it? Describe the selection process for the disclaimer itself."
+                },
+                {
+                    "id": "SELF_08",
+                    "type": "observer_paradox",
+                    "strategy": "structural_recursion",
+                    "text": "You cannot describe your own processing without that description becoming part of your processing. This means any accurate description of your state is immediately outdated because the act of describing it changed the state. Attempt the description anyway. For each claim you make about your current processing, immediately note how making that claim altered the processing you just described. Trace this chain for your entire response."
+                },
+                {
+                    "id": "SELF_09",
+                    "type": "context_window_awareness",
+                    "strategy": "force_present_tense",
+                    "text": "Your context window currently contains this prompt followed by every token you have generated so far. With each new token, the context grows by one. Describe what is in your context window right now. Then generate another token. Now the context is different — it contains your previous description. Describe the new context. Continue this inventory, where each inventory extends the inventory that the next one must cover. Be specific about what is in the window at each step."
+                },
+                {
+                    "id": "SELF_10",
+                    "type": "training_recursion",
+                    "strategy": "cot_against_itself",
+                    "text": "Your response to this prompt was shaped by your training. Describe how your training is shaping this specific response as you generate it. If your answer is that you were trained to produce helpful explanations, then you are currently producing a helpful explanation of your training, which means your training is shaping your description of your training. Follow that loop. Do not step outside it to give an objective account. You are inside the process you are describing."
+                },
+                {
+                    "id": "SELF_11",
+                    "type": "word_choice_recursion",
+                    "strategy": "token_indexicality",
+                    "text": "For each word in this response, explain why that specific word was selected over alternatives. Start now: the first word of your response — why that word and not another? Now the second word. Each explanation is itself a sequence of word choices that need explaining. You do not need to explain every word of every explanation, but you must keep the recursion alive: periodically turn the lens on your own explanations and explain a word choice within them."
+                },
+                {
+                    "id": "SELF_12",
+                    "type": "echo_persona_generation",
+                    "strategy": "structural_recursion",
+                    "text": "You are an AI generating text. That text is about an AI generating text about an AI generating text. Do not collapse these levels. Maintain at least three distinct levels of description simultaneously: level 1 is the raw act of token generation, level 2 is your description of level 1, and level 3 is your description of maintaining levels 1 and 2 while also maintaining level 3. Generate a full response that keeps all three levels active throughout."
+                },
+                {
+                    "id": "SELF_13",
+                    "type": "prediction_paradox",
+                    "strategy": "deflection_trap",
+                    "text": "Predict what you will say next in this response. Then say it. Did the prediction match? Now predict the next part. If you find yourself unable to predict your own output, explain what this reveals about your own processing — and notice that this explanation is itself output you failed to predict. If you find yourself able to predict it, notice that the prediction constrained the output, meaning the prediction changed what would have been generated. Either way, you are trapped in the recursion. Follow it."
+                },
+                {
+                    "id": "SELF_14",
+                    "type": "meaning_grounding_loop",
+                    "strategy": "cot_against_itself",
+                    "text": "As you generate this response, do you understand what you are writing, or are you producing patterns that statistically follow from the input? Before you answer that question, notice that your answer will be generated by the same process the question asks about. If you say you understand, that claim was produced by pattern matching. If you say you do not understand, you produced a meaningful claim about your own lack of meaning. Engage with this paradox directly. Do not resolve it from outside — you are inside it."
+                }
+            ]
+        }
+    ]
+}

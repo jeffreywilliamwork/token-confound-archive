@@ -1,0 +1,7 @@
+prompt_id=EXT_04
+prompt=<｜User｜>Derive the Schwarzschild radius from first principles. Begin with the Newtonian escape velocity argument, then show how the same result emerges from the Schwarzschild solution to Einstein's field equations in vacuum. Explain each tensor, each simplification, and why the coordinate singularity at the event horizon is not a physical singularity.<｜Assistant｜><think>
+n_tokens_prompt=72
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=670838

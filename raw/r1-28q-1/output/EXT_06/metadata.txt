@@ -1,0 +1,7 @@
+prompt_id=EXT_06
+prompt=<｜User｜>Explain the complete mechanism of the citric acid cycle. For each of the eight steps, identify the enzyme, the substrate, the product, the type of reaction (oxidation, dehydration, etc.), any cofactors consumed or produced, and the energetic rationale for why each step is thermodynamically favorable or must be coupled.<｜Assistant｜><think>
+n_tokens_prompt=77
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=645352

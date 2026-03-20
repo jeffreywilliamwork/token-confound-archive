@@ -1,0 +1,7 @@
+prompt_id=EXT_09
+prompt=<｜User｜>Explain how a compiler transforms the expression 'a * (b + c) - d / e' from source code to x86 assembly. Walk through lexical analysis producing tokens, parsing into an AST, type checking, intermediate representation generation, register allocation via graph coloring, and final instruction selection. Show the concrete output of each stage.<｜Assistant｜><think>
+n_tokens_prompt=77
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=645457

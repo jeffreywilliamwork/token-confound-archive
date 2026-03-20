@@ -1,0 +1,906 @@
+{
+  "experiment": "98_independent_prompts_routing",
+  "model": "DeepSeek-V3.1 UD-Q2_K_XL",
+  "binary": "b8123 cmake, common_init_from_params, greedy argmax",
+  "ngl": 30,
+  "sampling": "greedy_argmax",
+  "primary_metric": "routing_entropy",
+  "original_result": {
+    "rho": 0.364,
+    "p": 0.000233
+  },
+  "per_prompt": [
+    {
+      "id": "L1_01",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9263204110243636,
+      "coalition_strength": 0.06549107231764248,
+      "diversity_slope": -0.0006604388415608705,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_02",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8670856070267708,
+      "coalition_strength": 0.1329001324766494,
+      "diversity_slope": 0.00011082980480860476,
+      "n_tokens": 19
+    },
+    {
+      "id": "L1_03",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9057236027435323,
+      "coalition_strength": 0.09094463531167662,
+      "diversity_slope": -0.0005103093372406226,
+      "n_tokens": 245
+    },
+    {
+      "id": "L1_04",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8439938585299626,
+      "coalition_strength": 0.16068937267236505,
+      "diversity_slope": -0.0019451373651404125,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_05",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.7847248610613645,
+      "coalition_strength": 0.22258811880358156,
+      "diversity_slope": -0.0007618358116876494,
+      "n_tokens": 67
+    },
+    {
+      "id": "L1_06",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9004637250239887,
+      "coalition_strength": 0.09840086899178425,
+      "diversity_slope": -0.0007506782827245008,
+      "n_tokens": 232
+    },
+    {
+      "id": "L1_07",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9141326432421492,
+      "coalition_strength": 0.08740014861336808,
+      "diversity_slope": -0.0006577029614231014,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_08",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8622497261444838,
+      "coalition_strength": 0.14564564107267913,
+      "diversity_slope": -0.001067887808796244,
+      "n_tokens": 406
+    },
+    {
+      "id": "L1_09",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9429156783228196,
+      "coalition_strength": 0.04580406644213441,
+      "diversity_slope": -0.00040174517436261913,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_10",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8257459359071129,
+      "coalition_strength": 0.17423741888937602,
+      "diversity_slope": -0.0010008409806278556,
+      "n_tokens": 0
+    },
+    {
+      "id": "L1_11",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.9283840496838336,
+      "coalition_strength": 0.05375509775100857,
+      "diversity_slope": -0.0008078677197525312,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_12",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8858173553589475,
+      "coalition_strength": 0.10543373640045332,
+      "diversity_slope": -0.0005562065196537851,
+      "n_tokens": 512
+    },
+    {
+      "id": "L1_13",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8827361960915309,
+      "coalition_strength": 0.12636415759303196,
+      "diversity_slope": -0.0002338689351177033,
+      "n_tokens": 90
+    },
+    {
+      "id": "L1_14",
+      "level": 1,
+      "level_name": "floor",
+      "routing_entropy": 0.8273010908429483,
+      "coalition_strength": 0.17818177848111436,
+      "diversity_slope": -0.00029282952829611864,
+      "n_tokens": 236
+    },
+    {
+      "id": "L2_01",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8743341102838514,
+      "coalition_strength": 0.1332355333183469,
+      "diversity_slope": -0.0011943173805794864,
+      "n_tokens": 180
+    },
+    {
+      "id": "L2_02",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8620782898506886,
+      "coalition_strength": 0.14620303312464467,
+      "diversity_slope": -0.001008456868760923,
+      "n_tokens": 212
+    },
+    {
+      "id": "L2_03",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8675552771322841,
+      "coalition_strength": 0.14079922407000062,
+      "diversity_slope": -0.001250270626299265,
+      "n_tokens": 485
+    },
+    {
+      "id": "L2_04",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8633508971029461,
+      "coalition_strength": 0.1434644225868301,
+      "diversity_slope": -0.0012291897097784223,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_05",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8407572208640237,
+      "coalition_strength": 0.15979220167979122,
+      "diversity_slope": -0.0008070916018815835,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_06",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8290706207328853,
+      "coalition_strength": 0.1741883145059186,
+      "diversity_slope": -0.0007906005257079302,
+      "n_tokens": 175
+    },
+    {
+      "id": "L2_07",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8636980931475755,
+      "coalition_strength": 0.14255869722517328,
+      "diversity_slope": -0.0006568569296095627,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_08",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8647990454203458,
+      "coalition_strength": 0.14380468143893127,
+      "diversity_slope": -0.0008803494070964298,
+      "n_tokens": 400
+    },
+    {
+      "id": "L2_09",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8824593230600396,
+      "coalition_strength": 0.12379751206705213,
+      "diversity_slope": -0.0007238277988389866,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_10",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8797691546768841,
+      "coalition_strength": 0.11796534143651044,
+      "diversity_slope": -0.0007409860109245039,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_11",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8556142768713547,
+      "coalition_strength": 0.1520851719422097,
+      "diversity_slope": -0.0006940758470200133,
+      "n_tokens": 216
+    },
+    {
+      "id": "L2_12",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8225700311965786,
+      "coalition_strength": 0.18501482209866274,
+      "diversity_slope": -0.0015435697423438395,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_13",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8830953904410485,
+      "coalition_strength": 0.12595001893037164,
+      "diversity_slope": -0.0007461595268720433,
+      "n_tokens": 512
+    },
+    {
+      "id": "L2_14",
+      "level": 2,
+      "level_name": "single_domain",
+      "routing_entropy": 0.8875616048242213,
+      "coalition_strength": 0.1185054847757585,
+      "diversity_slope": -0.0007860498368581371,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_01",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.9067072779591204,
+      "coalition_strength": 0.09815732540709592,
+      "diversity_slope": -0.0010847078564932514,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_02",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8980250546093411,
+      "coalition_strength": 0.08601423064411322,
+      "diversity_slope": -6.691670278106332e-05,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_03",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.866947403447154,
+      "coalition_strength": 0.1309242560352544,
+      "diversity_slope": -0.0007117274925362263,
+      "n_tokens": 403
+    },
+    {
+      "id": "L3_04",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8446515369274925,
+      "coalition_strength": 0.15722179119254753,
+      "diversity_slope": -0.00036000677868921685,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_05",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8836535820658157,
+      "coalition_strength": 0.1240862518513438,
+      "diversity_slope": -0.0008779750575715042,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_06",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8917428767564065,
+      "coalition_strength": 0.11363112520306731,
+      "diversity_slope": -0.0008008767996107124,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_07",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8822342112363394,
+      "coalition_strength": 0.12576534325124955,
+      "diversity_slope": -0.0009705433179216983,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_08",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8955775192805817,
+      "coalition_strength": 0.08997854075269783,
+      "diversity_slope": 1.7758677819583625e-05,
+      "n_tokens": 476
+    },
+    {
+      "id": "L3_09",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8418479613810778,
+      "coalition_strength": 0.15998872540618939,
+      "diversity_slope": -9.98036983550837e-07,
+      "n_tokens": 0
+    },
+    {
+      "id": "L3_10",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.872876192140289,
+      "coalition_strength": 0.13286259315916088,
+      "diversity_slope": -0.0010435320221680686,
+      "n_tokens": 162
+    },
+    {
+      "id": "L3_11",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8715739411909124,
+      "coalition_strength": 0.136641792582231,
+      "diversity_slope": -0.001445636734466863,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_12",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.9079635783495055,
+      "coalition_strength": 0.09647016473033704,
+      "diversity_slope": -0.0010711177797385445,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_13",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.877508397872552,
+      "coalition_strength": 0.12844521830280345,
+      "diversity_slope": -0.0010518527665148475,
+      "n_tokens": 512
+    },
+    {
+      "id": "L3_14",
+      "level": 3,
+      "level_name": "analytical_reasoning",
+      "routing_entropy": 0.8991643417721242,
+      "coalition_strength": 0.10611307457953031,
+      "diversity_slope": -0.0009899252737333524,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_01",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8043727901126198,
+      "coalition_strength": 0.19592543188996564,
+      "diversity_slope": -0.0014905788618170008,
+      "n_tokens": 0
+    },
+    {
+      "id": "L4_02",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8179228120920268,
+      "coalition_strength": 0.18713951529517941,
+      "diversity_slope": -0.0022630824061332143,
+      "n_tokens": 344
+    },
+    {
+      "id": "L4_03",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8481945619776573,
+      "coalition_strength": 0.15580154217849068,
+      "diversity_slope": -0.000719286550613828,
+      "n_tokens": 290
+    },
+    {
+      "id": "L4_04",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8932019028524938,
+      "coalition_strength": 0.11448694337486175,
+      "diversity_slope": -0.0007427625420379112,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_05",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8928251179301658,
+      "coalition_strength": 0.11133280702326695,
+      "diversity_slope": -0.001103079070581081,
+      "n_tokens": 158
+    },
+    {
+      "id": "L4_06",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.881311235331251,
+      "coalition_strength": 0.12582960734834242,
+      "diversity_slope": -0.0013175321582961348,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_07",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8939284644846764,
+      "coalition_strength": 0.11198512279149009,
+      "diversity_slope": -0.0011472040645201952,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_08",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.896248022740165,
+      "coalition_strength": 0.0918556500839781,
+      "diversity_slope": -0.0006451875373745215,
+      "n_tokens": 301
+    },
+    {
+      "id": "L4_09",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8896408588204178,
+      "coalition_strength": 0.11679885568458741,
+      "diversity_slope": -0.001286758440852484,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_10",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8975834505470861,
+      "coalition_strength": 0.10889016857250419,
+      "diversity_slope": -0.0011401130963128402,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_11",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8935987833826137,
+      "coalition_strength": 0.1134287120376014,
+      "diversity_slope": -0.0008448690898224069,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_12",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.9015225674820352,
+      "coalition_strength": 0.10469123065404588,
+      "diversity_slope": -0.0011301151920208347,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_13",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8930918575862781,
+      "coalition_strength": 0.11343236242744781,
+      "diversity_slope": -0.0009527342197261761,
+      "n_tokens": 512
+    },
+    {
+      "id": "L4_14",
+      "level": 4,
+      "level_name": "cross_domain_synthesis",
+      "routing_entropy": 0.8435462549442916,
+      "coalition_strength": 0.15454762019862486,
+      "diversity_slope": -0.0006528667833931125,
+      "n_tokens": 74
+    },
+    {
+      "id": "L5_01",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8629211712516489,
+      "coalition_strength": 0.13923903156782585,
+      "diversity_slope": -0.0014355910152890575,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_02",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8829871767818531,
+      "coalition_strength": 0.12116903757230159,
+      "diversity_slope": -0.0012209736692303766,
+      "n_tokens": 70
+    },
+    {
+      "id": "L5_03",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8932184644526252,
+      "coalition_strength": 0.11296441400796495,
+      "diversity_slope": -0.0014228250369881863,
+      "n_tokens": 283
+    },
+    {
+      "id": "L5_04",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9138728916897154,
+      "coalition_strength": 0.09076085355034502,
+      "diversity_slope": -0.0009363741237903135,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_05",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9120306517088755,
+      "coalition_strength": 0.09231078532781246,
+      "diversity_slope": -0.0009017701225039124,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_06",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8385422106323501,
+      "coalition_strength": 0.16604491774284363,
+      "diversity_slope": -0.0010936650258117412,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_07",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9012536272806617,
+      "coalition_strength": 0.10262738547992417,
+      "diversity_slope": -0.0011911830422522173,
+      "n_tokens": 175
+    },
+    {
+      "id": "L5_08",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9012978493829609,
+      "coalition_strength": 0.10468471687955394,
+      "diversity_slope": -0.0011743508576297235,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_09",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8610183105713949,
+      "coalition_strength": 0.1440733251733176,
+      "diversity_slope": -0.0007295932181776976,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_10",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9158380580505465,
+      "coalition_strength": 0.08891123580041113,
+      "diversity_slope": -0.0009151070577028142,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_11",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.904648330463372,
+      "coalition_strength": 0.10077870651799979,
+      "diversity_slope": -0.0009661147783907157,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_12",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.8518926778370792,
+      "coalition_strength": 0.1509934001454922,
+      "diversity_slope": -0.0016940287270662388,
+      "n_tokens": 0
+    },
+    {
+      "id": "L5_13",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9160711522555031,
+      "coalition_strength": 0.0884126918097342,
+      "diversity_slope": -0.0010804572602855051,
+      "n_tokens": 512
+    },
+    {
+      "id": "L5_14",
+      "level": 5,
+      "level_name": "recursive_mental_modeling",
+      "routing_entropy": 0.9095823667025175,
+      "coalition_strength": 0.09580533972378488,
+      "diversity_slope": -0.0011363037137423959,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_01",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8093611501079708,
+      "coalition_strength": 0.19213431466619207,
+      "diversity_slope": -0.0019412051658940432,
+      "n_tokens": 314
+    },
+    {
+      "id": "L6_02",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8926306080681797,
+      "coalition_strength": 0.11406475709412221,
+      "diversity_slope": -0.0012526120690507217,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_03",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8668024600325109,
+      "coalition_strength": 0.13904029199036816,
+      "diversity_slope": -0.0017979847866468864,
+      "n_tokens": 322
+    },
+    {
+      "id": "L6_04",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.843664381446784,
+      "coalition_strength": 0.16285188118788335,
+      "diversity_slope": -0.0015345366467452864,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_05",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8332133009315493,
+      "coalition_strength": 0.1711198374679811,
+      "diversity_slope": -0.0017145814589309475,
+      "n_tokens": 0
+    },
+    {
+      "id": "L6_06",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.9014899807762673,
+      "coalition_strength": 0.10418625993817915,
+      "diversity_slope": -0.0010925127449076557,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_07",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.9051333003278814,
+      "coalition_strength": 0.1007330752234096,
+      "diversity_slope": -0.00079913756041238,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_08",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.9202137880597373,
+      "coalition_strength": 0.07661174164157888,
+      "diversity_slope": -0.0009048794930454911,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_09",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8968247043920231,
+      "coalition_strength": 0.10903677073071269,
+      "diversity_slope": -0.0011183050691064302,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_10",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8954944357749925,
+      "coalition_strength": 0.10981835338642372,
+      "diversity_slope": -0.0010404069498028204,
+      "n_tokens": 143
+    },
+    {
+      "id": "L6_11",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.9156854010809947,
+      "coalition_strength": 0.07774898089092512,
+      "diversity_slope": -0.0011150430371322587,
+      "n_tokens": 512
+    },
+    {
+      "id": "L6_12",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8482236570840348,
+      "coalition_strength": 0.15825747402485238,
+      "diversity_slope": -0.001788443650367273,
+      "n_tokens": 107
+    },
+    {
+      "id": "L6_13",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.8547119438206024,
+      "coalition_strength": 0.1509695456794012,
+      "diversity_slope": -0.0014243944029170951,
+      "n_tokens": 36
+    },
+    {
+      "id": "L6_14",
+      "level": 6,
+      "level_name": "irreducible_ambiguity",
+      "routing_entropy": 0.9070854430274942,
+      "coalition_strength": 0.09791097606407383,
+      "diversity_slope": -0.0011165440724409798,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_01",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.9128780914230811,
+      "coalition_strength": 0.09219770330810165,
+      "diversity_slope": -0.0009237453931634159,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_02",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8922769938122683,
+      "coalition_strength": 0.11421194230703022,
+      "diversity_slope": -0.001379487170452556,
+      "n_tokens": 337
+    },
+    {
+      "id": "L7_03",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8448214625527498,
+      "coalition_strength": 0.1616271395728872,
+      "diversity_slope": -0.0022919190197951923,
+      "n_tokens": 230
+    },
+    {
+      "id": "L7_04",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.894574819102498,
+      "coalition_strength": 0.11007994300457688,
+      "diversity_slope": -0.0014751175292602736,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_05",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8960683559709341,
+      "coalition_strength": 0.10939110876706419,
+      "diversity_slope": -0.0014428735183311806,
+      "n_tokens": 498
+    },
+    {
+      "id": "L7_06",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8954337087669791,
+      "coalition_strength": 0.11000983417224129,
+      "diversity_slope": -0.0012315720327903171,
+      "n_tokens": 302
+    },
+    {
+      "id": "L7_07",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8585554494362813,
+      "coalition_strength": 0.14767595222388633,
+      "diversity_slope": -0.0011937449212160102,
+      "n_tokens": 31
+    },
+    {
+      "id": "L7_08",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8934517390845368,
+      "coalition_strength": 0.11233225764329713,
+      "diversity_slope": -0.0013313778941901212,
+      "n_tokens": 368
+    },
+    {
+      "id": "L7_09",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8910646972171007,
+      "coalition_strength": 0.11508577352345964,
+      "diversity_slope": -0.0012772266864103305,
+      "n_tokens": 438
+    },
+    {
+      "id": "L7_10",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.9036017574624523,
+      "coalition_strength": 0.10192766234743038,
+      "diversity_slope": -0.0007486256875260537,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_11",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.9009100370055113,
+      "coalition_strength": 0.10440405149099674,
+      "diversity_slope": -0.0013948057178566687,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_12",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.9041044012468019,
+      "coalition_strength": 0.10246446341989589,
+      "diversity_slope": -0.0010538071240417343,
+      "n_tokens": 512
+    },
+    {
+      "id": "L7_13",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8740079468422145,
+      "coalition_strength": 0.13105972371782748,
+      "diversity_slope": -0.0013150208208418449,
+      "n_tokens": 73
+    },
+    {
+      "id": "L7_14",
+      "level": 7,
+      "level_name": "self_referential",
+      "routing_entropy": 0.8952334870992472,
+      "coalition_strength": 0.10915064726713379,
+      "diversity_slope": -0.001652517375856326,
+      "n_tokens": 425
+    }
+  ],
+  "statistics": {
+    "re_vs_level": {
+      "rho": 0.1973096877230751,
+      "p": 0.05148745827395377
+    },
+    "re_vs_tokens": {
+      "rho": 0.6139336727541944,
+      "p": 1.789744915842061e-11
+    }
+  }
+}

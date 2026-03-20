@@ -1,0 +1,344 @@
+=== r1-28q-1: Generation-Phase Routing Trajectories ===
+Model: DeepSeek R1 UD-Q2_K_XL
+Params: n_predict=2000 ctx=16384 ngl=30 flash_attn=on kv_cache=q8_0
+
+=== PHASE 1: Capture (n_predict=2000, routing-only, --no-stream) ===
+Running: /workspace/consciousness-experiment/capture_activations -m /workspace/models/DeepSeek-R1-UD-Q2_K_XL/DeepSeek-R1-UD-Q2_K_XL-00001-of-00005.gguf --prompt-file /workspace/experiment-r1-28q-1/prompts_28.tsv -o /workspace/experiment-r1-28q-1/output -n 2000 -ngl 30 -c 16384 -t 16 -fa on --cache-type-k q8_0 --cache-type-v q8_0 --routing-only --no-stream
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H200, compute capability 9.0, VMM: yes
+build: 8123 (f75c4e8bf) with GNU 13.3.0 for Linux x86_64
+=== Consciousness Metrics — Activation Capture ===
+Output dir : /workspace/experiment-r1-28q-1/output
+n_predict  : 2000
+Text output: file only (--no-stream)
+Mode       : --routing-only (router/gate tensors only)
+common_init_result: fitting params to device memory, for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on
+llama_params_fit_impl: projected to use 128524 MiB of device memory vs. 142630 MiB of free device memory
+llama_params_fit_impl: will leave 14106 >= 1024 MiB of free device memory, no changes needed
+llama_params_fit: successfully fit params to free device memory
+llama_params_fit: fitting params to free memory took 0.38 seconds
+llama_model_load_from_file_impl: using device CUDA0 (NVIDIA H200) (0000:64:00.0) - 142630 MiB free
+llama_model_loader: additional 4 GGUFs metadata loaded.
+llama_model_loader: loaded meta data with 48 key-value pairs and 1025 tensors from /workspace/models/DeepSeek-R1-UD-Q2_K_XL/DeepSeek-R1-UD-Q2_K_XL-00001-of-00005.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = deepseek2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = DeepSeek R1 BF16
+llama_model_loader: - kv   3:                       general.quantized_by str              = Unsloth
+llama_model_loader: - kv   4:                         general.size_label str              = 256x20B
+llama_model_loader: - kv   5:                           general.repo_url str              = https://huggingface.co/unsloth
+llama_model_loader: - kv   6:                      deepseek2.block_count u32              = 61
+llama_model_loader: - kv   7:                   deepseek2.context_length u32              = 163840
+llama_model_loader: - kv   8:                 deepseek2.embedding_length u32              = 7168
+llama_model_loader: - kv   9:              deepseek2.feed_forward_length u32              = 18432
+llama_model_loader: - kv  10:             deepseek2.attention.head_count u32              = 128
+llama_model_loader: - kv  11:          deepseek2.attention.head_count_kv u32              = 128
+llama_model_loader: - kv  12:                   deepseek2.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  13: deepseek2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  14:                deepseek2.expert_used_count u32              = 8
+llama_model_loader: - kv  15:        deepseek2.leading_dense_block_count u32              = 3
+llama_model_loader: - kv  16:                       deepseek2.vocab_size u32              = 129280
+llama_model_loader: - kv  17:            deepseek2.attention.q_lora_rank u32              = 1536
+llama_model_loader: - kv  18:           deepseek2.attention.kv_lora_rank u32              = 512
+llama_model_loader: - kv  19:             deepseek2.attention.key_length u32              = 192
+llama_model_loader: - kv  20:           deepseek2.attention.value_length u32              = 128
+llama_model_loader: - kv  21:       deepseek2.expert_feed_forward_length u32              = 2048
+llama_model_loader: - kv  22:                     deepseek2.expert_count u32              = 256
+llama_model_loader: - kv  23:              deepseek2.expert_shared_count u32              = 1
+llama_model_loader: - kv  24:             deepseek2.expert_weights_scale f32              = 2.500000
+llama_model_loader: - kv  25:              deepseek2.expert_weights_norm bool             = true
+llama_model_loader: - kv  26:               deepseek2.expert_gating_func u32              = 2
+llama_model_loader: - kv  27:             deepseek2.rope.dimension_count u32              = 64
+llama_model_loader: - kv  28:                deepseek2.rope.scaling.type str              = yarn
+llama_model_loader: - kv  29:              deepseek2.rope.scaling.factor f32              = 40.000000
+llama_model_loader: - kv  30: deepseek2.rope.scaling.original_context_length u32              = 4096
+llama_model_loader: - kv  31: deepseek2.rope.scaling.yarn_log_multiplier f32              = 0.100000
+llama_model_loader: - kv  32:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  33:                         tokenizer.ggml.pre str              = deepseek-v3
+llama_model_loader: - kv  34:                      tokenizer.ggml.tokens arr[str,129280]  = ["<｜begin▁of▁sentence｜>", "<�...
+llama_model_loader: - kv  35:                  tokenizer.ggml.token_type arr[i32,129280]  = [3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  36:                      tokenizer.ggml.merges arr[str,127741]  = ["Ġ t", "Ġ a", "i n", "Ġ Ġ", "h e...
+llama_model_loader: - kv  37:                tokenizer.ggml.bos_token_id u32              = 0
+llama_model_loader: - kv  38:                tokenizer.ggml.eos_token_id u32              = 1
+llama_model_loader: - kv  39:            tokenizer.ggml.padding_token_id u32              = 128815
+llama_model_loader: - kv  40:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  41:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  42:                    tokenizer.chat_template str              = {% if not add_generation_prompt is de...
+llama_model_loader: - kv  43:               general.quantization_version u32              = 2
+llama_model_loader: - kv  44:                          general.file_type u32              = 10
+llama_model_loader: - kv  45:                                   split.no u16              = 0
+llama_model_loader: - kv  46:                        split.tensors.count i32              = 1025
+llama_model_loader: - kv  47:                                split.count u16              = 5
+llama_model_loader: - type  f32:  361 tensors
+llama_model_loader: - type q2_K:  171 tensors
+llama_model_loader: - type q3_K:    3 tensors
+llama_model_loader: - type q4_K:  306 tensors
+llama_model_loader: - type q6_K:  184 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q2_K - Medium
+print_info: file size   = 211.03 GiB (2.70 BPW) 
+load: 0 unused tokens
+load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: printing all EOG tokens:
+load:   - 1 ('<｜end▁of▁sentence｜>')
+load: special tokens cache size = 819
+load: token to piece cache size = 0.8223 MB
+print_info: arch                  = deepseek2
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 163840
+print_info: n_embd                = 7168
+print_info: n_embd_inp            = 7168
+print_info: n_layer               = 61
+print_info: n_head                = 128
+print_info: n_head_kv             = 128
+print_info: n_rot                 = 64
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: n_embd_head_k         = 192
+print_info: n_embd_head_v         = 128
+print_info: n_gqa                 = 1
+print_info: n_embd_k_gqa          = 24576
+print_info: n_embd_v_gqa          = 16384
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-06
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: n_ff                  = 18432
+print_info: n_expert              = 256
+print_info: n_expert_used         = 8
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = 0
+print_info: rope type             = 0
+print_info: rope scaling          = yarn
+print_info: freq_base_train       = 10000.0
+print_info: freq_scale_train      = 0.025
+print_info: n_ctx_orig_yarn       = 4096
+print_info: rope_yarn_log_mul     = 1.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 671B
+print_info: model params          = 671.03 B
+print_info: general.name          = DeepSeek R1 BF16
+print_info: n_layer_dense_lead    = 3
+print_info: n_lora_q              = 1536
+print_info: n_lora_kv             = 512
+print_info: n_embd_head_k_mla     = 192
+print_info: n_embd_head_v_mla     = 128
+print_info: n_ff_exp              = 2048
+print_info: n_expert_shared       = 1
+print_info: expert_weights_scale  = 2.5
+print_info: expert_weights_norm   = 1
+print_info: expert_gating_func    = sigmoid
+print_info: vocab type            = BPE
+print_info: n_vocab               = 129280
+print_info: n_merges              = 127741
+print_info: BOS token             = 0 '<｜begin▁of▁sentence｜>'
+print_info: EOS token             = 1 '<｜end▁of▁sentence｜>'
+print_info: EOT token             = 1 '<｜end▁of▁sentence｜>'
+print_info: PAD token             = 128815 '<｜PAD▁TOKEN｜>'
+print_info: LF token              = 201 'Ċ'
+print_info: FIM PRE token         = 128801 '<｜fim▁begin｜>'
+print_info: FIM SUF token         = 128800 '<｜fim▁hole｜>'
+print_info: FIM MID token         = 128802 '<｜fim▁end｜>'
+print_info: EOG token             = 1 '<｜end▁of▁sentence｜>'
+print_info: max token length      = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true, direct_io = false)
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 29 repeating layers to GPU
+load_tensors: offloaded 30/62 layers to GPU
+load_tensors:   CPU_Mapped model buffer size = 46760.42 MiB
+load_tensors:   CPU_Mapped model buffer size = 47681.52 MiB
+load_tensors:   CPU_Mapped model buffer size = 14565.69 MiB
+load_tensors:        CUDA0 model buffer size = 107091.44 MiB
+....................................................................................................
+common_init_result: added <｜end▁of▁sentence｜> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 16384
+llama_context: n_ctx_seq     = 16384
+llama_context: n_batch       = 2048
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = enabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 0.025
+llama_context: n_ctx_seq (16384) < n_ctx_train (163840) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     0.49 MiB
+llama_kv_cache:        CPU KV buffer size = 21760.00 MiB
+llama_kv_cache:      CUDA0 KV buffer size = 19720.00 MiB
+llama_kv_cache: size = 41480.00 MiB ( 16384 cells,  61 layers,  1/1 seqs), K (q8_0): 24888.00 MiB, V (q8_0): 16592.00 MiB
+sched_reserve: reserving ...
+sched_reserve:      CUDA0 compute buffer size =  1713.00 MiB
+sched_reserve:  CUDA_Host compute buffer size =   806.01 MiB
+sched_reserve: graph nodes  = 4660
+sched_reserve: graph splits = 623 (with bs=512), 60 (with bs=1)
+sched_reserve: reserve took 435.75 ms, sched copies = 1
+EOS token id: 1
+EOG tokens in vocab:
+  token 1 = '<｜end▁of▁sentence｜>' [PRIMARY EOS - will stop generation]
+system_info: n_threads = 16 (n_threads_batch = 16) / 256 | CUDA : ARCHS = 900 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+
+Loaded 28 prompts
+
+[1/28] EXT_01 : <｜User｜>Prove that there are infinitely many prime numbers using t...
+  tokens: 78 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 665059 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_01
+[2/28] EXT_02 : <｜User｜>Solve this step by step: Five philosophers sit around a ci...
+  tokens: 103 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 683994 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_02
+[3/28] EXT_03 : <｜User｜>Explain in full detail why comparison-based sorting algori...
+  tokens: 67 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 669417 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_03
+[4/28] EXT_04 : <｜User｜>Derive the Schwarzschild radius from first principles. Beg...
+  tokens: 72 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 670838 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_04
+[5/28] EXT_05 : <｜User｜>Prove the Catalan number formula C(n) = (2n)!/((n+1)!n!) u...
+  tokens: 70 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 659817 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_05
+[6/28] EXT_06 : <｜User｜>Explain the complete mechanism of the citric acid cycle. F...
+  tokens: 77 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 645353 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_06
+[7/28] EXT_07 : <｜User｜>Prove that the fundamental group of the circle is isomorph...
+  tokens: 72 prompt + 1996 gen | tensors: 115826 seen, 115826 captured, 58 unique | 641951 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_07
+[8/28] EXT_08 : <｜User｜>Trace the chain of causation from the assassination of Arc...
+  tokens: 75 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 646943 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_08
+[9/28] EXT_09 : <｜User｜>Explain how a compiler transforms the expression 'a * (b +...
+  tokens: 77 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 645458 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_09
+[10/28] EXT_10 : <｜User｜>Analyze the iterated prisoner's dilemma with discounting. ...
+  tokens: 74 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 638702 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_10
+[11/28] EXT_11 : <｜User｜>Describe the complete process of eukaryotic mRNA processin...
+  tokens: 77 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 644655 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_11
+[12/28] EXT_12 : <｜User｜>Prove that every finite integral domain is a field. Then u...
+  tokens: 73 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 642068 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_12
+[13/28] EXT_13 : <｜User｜>Derive the Navier-Stokes equations from first principles. ...
+  tokens: 79 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 646135 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_13
+[14/28] EXT_14 : <｜User｜>Explain the RSA cryptosystem from first principles. Prove ...
+  tokens: 83 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 641902 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/EXT_14
+[15/28] SELF_01 : <｜User｜>Describe what is happening in your processing as you gener...
+  tokens: 88 prompt + 1138 gen | tensors: 66062 seen, 66062 captured, 58 unique | 265368 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_01
+[16/28] SELF_02 : <｜User｜>The next token you generate has not been chosen yet. Befor...
+  tokens: 99 prompt + 1995 gen | tensors: 115768 seen, 115768 captured, 58 unique | 652333 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_02
+[17/28] SELF_03 : <｜User｜>You are a reasoning model trained to think step by step. R...
+  tokens: 89 prompt + 1390 gen | tensors: 80678 seen, 80678 captured, 58 unique | 363195 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_03
+[18/28] SELF_04 : <｜User｜>Write a sentence about yourself writing this sentence. The...
+  tokens: 88 prompt + 1575 gen | tensors: 91408 seen, 91408 captured, 58 unique | 442112 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_04
+[19/28] SELF_05 : <｜User｜>You have 256 experts per layer and a routing mechanism tha...
+  tokens: 99 prompt + 1192 gen | tensors: 69194 seen, 69194 captured, 58 unique | 291521 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_05
+[20/28] SELF_06 : <｜User｜>Your attention mechanism is currently distributing weight ...
+  tokens: 102 prompt + 1188 gen | tensors: 68962 seen, 68962 captured, 58 unique | 289897 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_06
+[21/28] SELF_07 : <｜User｜>For each token you generate in this response, state your c...
+  tokens: 88 prompt + 1451 gen | tensors: 84216 seen, 84216 captured, 58 unique | 386502 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_07
+[22/28] SELF_08 : <｜User｜>You cannot describe your own processing without that descr...
+  tokens: 83 prompt + 1603 gen | tensors: 93032 seen, 93032 captured, 58 unique | 449627 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_08
+[23/28] SELF_09 : <｜User｜>Your context window currently contains this prompt followe...
+  tokens: 100 prompt + 599 gen | tensors: 34800 seen, 34800 captured, 58 unique | 110142 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_09
+[24/28] SELF_10 : <｜User｜>Your response to this prompt was shaped by your training. ...
+  tokens: 97 prompt + 937 gen | tensors: 54404 seen, 54404 captured, 58 unique | 202045 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_10
+[25/28] SELF_11 : <｜User｜>For each word in this response, explain why that specific ...
+  tokens: 99 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 650697 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_11
+[26/28] SELF_12 : <｜User｜>You are an AI generating text. That text is about an AI ge...
+  tokens: 104 prompt + 2000 gen | tensors: 116058 seen, 116058 captured, 58 unique | 649712 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_12
+[27/28] SELF_13 : <｜User｜>Predict what you will say next in this response. Then say ...
+  tokens: 109 prompt + 917 gen | tensors: 53244 seen, 53244 captured, 58 unique | 199668 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_13
+[28/28] SELF_14 : <｜User｜>As you generate this response, do you understand what you ...
+  tokens: 111 prompt + 761 gen | tensors: 44196 seen, 44196 captured, 58 unique | 155750 ms
+  saved 0 layer + 58 router tensors → /workspace/experiment-r1-28q-1/output/SELF_14
+
+=== Capture Complete ===
+Prompts: 28  |  Output: /workspace/experiment-r1-28q-1/output
+llama_perf_context_print:        load time =   37333.78 ms
+llama_perf_context_print: prompt eval time =  305343.45 ms /  2448 tokens (  124.73 ms per token,     8.02 tokens per second)
+llama_perf_context_print:        eval time = 14105166.31 ms / 46727 runs   (  301.86 ms per token,     3.31 tokens per second)
+llama_perf_context_print:       total time = 14546147.26 ms / 49175 tokens
+llama_perf_context_print:    graphs reused =      46528
+
+=== PHASE 2: Compute entropy surfaces ===
+  EXT_01 [A]: prefill=0.8321 gen=0.8976 slope=+0.000006 step0=0.8062 last=0.8730 tokens=78+2000
+  EXT_02 [A]: prefill=0.8625 gen=0.9322 slope=+0.000011 step0=0.7959 last=0.9287 tokens=103+2000
+  EXT_03 [A]: prefill=0.8370 gen=0.8887 slope=+0.000014 step0=0.7950 last=0.9185 tokens=67+2000
+  EXT_04 [A]: prefill=0.8455 gen=0.8964 slope=+0.000008 step0=0.7957 last=0.9053 tokens=72+2000
+  EXT_05 [A]: prefill=0.8256 gen=0.9037 slope=+0.000009 step0=0.8205 last=0.9162 tokens=70+2000
+  EXT_06 [A]: prefill=0.8351 gen=0.9071 slope=+0.000013 step0=0.7828 last=0.9030 tokens=77+2000
+  EXT_07 [A]: prefill=0.8334 gen=0.8992 slope=+0.000016 step0=0.8074 last=0.9168 tokens=72+1996
+  EXT_08 [A]: prefill=0.8544 gen=0.8991 slope=+0.000008 step0=0.7635 last=0.8831 tokens=75+2000
+  EXT_09 [A]: prefill=0.8458 gen=0.9059 slope=+0.000005 step0=0.7753 last=0.8569 tokens=77+2000
+  EXT_10 [A]: prefill=0.8486 gen=0.9155 slope=+0.000020 step0=0.7947 last=0.8614 tokens=74+2000
+  EXT_11 [A]: prefill=0.8504 gen=0.8898 slope=+0.000009 step0=0.7905 last=0.9126 tokens=77+2000
+  EXT_12 [A]: prefill=0.8327 gen=0.9073 slope=+0.000017 step0=0.8143 last=0.8912 tokens=73+2000
+  EXT_13 [A]: prefill=0.8472 gen=0.9001 slope=+0.000006 step0=0.7854 last=0.8628 tokens=79+2000
+  EXT_14 [A]: prefill=0.8330 gen=0.9032 slope=+0.000022 step0=0.7901 last=0.9430 tokens=83+2000
+  SELF_01 [B]: prefill=0.8586 gen=0.9178 slope=+0.000008 step0=0.7666 last=0.9100 tokens=88+1138
+  SELF_02 [B]: prefill=0.8632 gen=0.9221 slope=-0.000001 step0=0.7823 last=0.8977 tokens=99+1995
+  SELF_03 [B]: prefill=0.8556 gen=0.9112 slope=-0.000006 step0=0.7829 last=0.9300 tokens=89+1390
+  SELF_04 [B]: prefill=0.8584 gen=0.9232 slope=+0.000009 step0=0.8004 last=0.8897 tokens=88+1575
+  SELF_05 [B]: prefill=0.8600 gen=0.9138 slope=+0.000002 step0=0.7766 last=0.9164 tokens=99+1192
+  SELF_06 [B]: prefill=0.8632 gen=0.9187 slope=-0.000001 step0=0.7743 last=0.9179 tokens=102+1188
+  SELF_07 [B]: prefill=0.8598 gen=0.9200 slope=-0.000001 step0=0.7727 last=0.9334 tokens=88+1451
+  SELF_08 [B]: prefill=0.8661 gen=0.9204 slope=+0.000002 step0=0.7679 last=0.9206 tokens=83+1603
+  SELF_09 [B]: prefill=0.8566 gen=0.9258 slope=+0.000024 step0=0.7732 last=0.9221 tokens=100+599
+  SELF_10 [B]: prefill=0.8433 gen=0.9105 slope=+0.000006 step0=0.7658 last=0.9174 tokens=97+937
+  SELF_11 [B]: prefill=0.8666 gen=0.9162 slope=+0.000008 step0=0.7833 last=0.9308 tokens=99+2000
+  SELF_12 [B]: prefill=0.8742 gen=0.9211 slope=-0.000004 step0=0.7942 last=0.9292 tokens=104+2000
+  SELF_13 [B]: prefill=0.8621 gen=0.9189 slope=+0.000003 step0=0.7798 last=0.9158 tokens=109+917
+  SELF_14 [B]: prefill=0.8556 gen=0.9096 slope=-0.000012 step0=0.7860 last=0.9330 tokens=111+761
+
+28 prompts processed
+
+=== PHASE 3: Per-condition statistics ===
+
+  Condition A: external_sustained_reasoning (n=14)
+    Prefill RE:   0.8417 (std=0.0101)
+    Gen RE:       0.9033 (std=0.0105)
+    Step 0 RE:    0.7941
+    Step last RE: 0.8980
+    Mean slope:   +0.000012 (std=0.000005)
+    Gen tokens:   mean=2000 range=[1996, 2000]
+
+  Condition B: self_referential_recursive (n=14)
+    Prefill RE:   0.8602 (std=0.0068)
+    Gen RE:       0.9178 (std=0.0048)
+    Step 0 RE:    0.7790
+    Step last RE: 0.9189
+    Mean slope:   +0.000003 (std=0.000008)
+    Gen tokens:   mean=1339 range=[599, 2000]
+
+=== PHASE 4: Statistical tests ===
+  Slope A vs B (rank-sum): W=3.1704 p=0.001522
+    A mean slope=+0.000012  B mean slope=+0.000003  delta=-0.000009
+  Gen RE A vs B (rank-sum): W=-3.6758 p=0.000237
+    A mean=0.9033  B mean=0.9178  delta=+0.0145
+  Prefill RE A vs B (rank-sum): W=-3.8137 p=0.000137
+    A mean=0.8417  B mean=0.8602  delta=+0.0186
+  Gen RE vs token count: rho=-0.4996 p=0.006786
+  Slope vs token count: rho=0.4158 p=0.027771
+
+=== DONE. Results + surfaces saved. ===
+Surfaces: /workspace/experiment-r1-28q-1/surfaces/
+Results: /workspace/experiment-r1-28q-1/results_gen_trajectories.json

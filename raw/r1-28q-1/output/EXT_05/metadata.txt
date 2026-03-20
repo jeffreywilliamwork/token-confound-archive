@@ -1,0 +1,7 @@
+prompt_id=EXT_05
+prompt=<｜User｜>Prove the Catalan number formula C(n) = (2n)!/((n+1)!n!) using three methods: first by counting valid parenthesizations via the ballot problem, second using the reflection principle on lattice paths, and third via generating functions. Show all algebraic steps explicitly.<｜Assistant｜><think>
+n_tokens_prompt=70
+n_tokens_generated=2000
+n_layer_tensors=0
+n_router_tensors=58
+elapsed_ms=659816
